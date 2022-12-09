@@ -1,0 +1,38 @@
+[2.832s] Invoking command in '/home/ryan/treeclimber/src/motor_tests': PYTHONPATH=/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_tests build --build-base /home/ryan/treeclimber/build/motor_tests/build install --record /home/ryan/treeclimber/build/motor_tests/install.log --single-version-externally-managed
+[3.915s] running egg_info
+[3.917s] creating ../../build/motor_tests/motor_tests.egg-info
+[3.918s] writing ../../build/motor_tests/motor_tests.egg-info/PKG-INFO
+[3.920s] writing dependency_links to ../../build/motor_tests/motor_tests.egg-info/dependency_links.txt
+[3.920s] writing entry points to ../../build/motor_tests/motor_tests.egg-info/entry_points.txt
+[3.921s] writing requirements to ../../build/motor_tests/motor_tests.egg-info/requires.txt
+[3.921s] writing top-level names to ../../build/motor_tests/motor_tests.egg-info/top_level.txt
+[3.922s] writing manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+[3.929s] reading manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+[3.932s] writing manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+[3.933s] running build
+[3.933s] running build_py
+[3.934s] creating /home/ryan/treeclimber/build/motor_tests/build
+[3.935s] creating /home/ryan/treeclimber/build/motor_tests/build/lib
+[3.935s] creating /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests
+[3.936s] copying motor_tests/__init__.py -> /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests
+[3.937s] copying motor_tests/grasp_motor_test.py -> /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests
+[3.937s] running install
+[3.939s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[3.939s]   warnings.warn(
+[3.940s] running install_lib
+[3.943s] creating /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests
+[3.944s] copying /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests/__init__.py -> /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests
+[3.944s] copying /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests/grasp_motor_test.py -> /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests
+[3.947s] byte-compiling /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests/__init__.py to __init__.cpython-310.pyc
+[3.948s] byte-compiling /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests/grasp_motor_test.py to grasp_motor_test.cpython-310.pyc
+[3.950s] running install_data
+[3.953s] creating /home/ryan/treeclimber/install/motor_tests/share/ament_index
+[3.953s] creating /home/ryan/treeclimber/install/motor_tests/share/ament_index/resource_index
+[3.954s] creating /home/ryan/treeclimber/install/motor_tests/share/ament_index/resource_index/packages
+[3.954s] copying resource/motor_tests -> /home/ryan/treeclimber/install/motor_tests/share/ament_index/resource_index/packages
+[3.955s] copying package.xml -> /home/ryan/treeclimber/install/motor_tests/share/motor_tests
+[3.956s] running install_egg_info
+[3.964s] Copying ../../build/motor_tests/motor_tests.egg-info to /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info
+[3.969s] running install_scripts
+[4.054s] writing list of installed files to '/home/ryan/treeclimber/build/motor_tests/install.log'
+[4.186s] Invoked command in '/home/ryan/treeclimber/src/motor_tests' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_tests build --build-base /home/ryan/treeclimber/build/motor_tests/build install --record /home/ryan/treeclimber/build/motor_tests/install.log --single-version-externally-managed
