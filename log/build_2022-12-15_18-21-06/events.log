@@ -1,0 +1,75 @@
+[0.000000] (-) TimerEvent: {}
+[0.001661] (motor_tests) JobQueued: {'identifier': 'motor_tests', 'dependencies': OrderedDict()}
+[0.002370] (motor_tests) JobStarted: {'identifier': 'motor_tests'}
+[0.099096] (-) TimerEvent: {}
+[0.200177] (-) TimerEvent: {}
+[0.301467] (-) TimerEvent: {}
+[0.402351] (-) TimerEvent: {}
+[0.503122] (-) TimerEvent: {}
+[0.603825] (-) TimerEvent: {}
+[0.704554] (-) TimerEvent: {}
+[0.805289] (-) TimerEvent: {}
+[0.906067] (-) TimerEvent: {}
+[1.006752] (-) TimerEvent: {}
+[1.107482] (-) TimerEvent: {}
+[1.208216] (-) TimerEvent: {}
+[1.309148] (-) TimerEvent: {}
+[1.410478] (-) TimerEvent: {}
+[1.511260] (-) TimerEvent: {}
+[1.612030] (-) TimerEvent: {}
+[1.712854] (-) TimerEvent: {}
+[1.813652] (-) TimerEvent: {}
+[1.914468] (-) TimerEvent: {}
+[2.015173] (-) TimerEvent: {}
+[2.115901] (-) TimerEvent: {}
+[2.216588] (-) TimerEvent: {}
+[2.317311] (-) TimerEvent: {}
+[2.418201] (-) TimerEvent: {}
+[2.519315] (-) TimerEvent: {}
+[2.620069] (-) TimerEvent: {}
+[2.720866] (-) TimerEvent: {}
+[2.821956] (-) TimerEvent: {}
+[2.923472] (-) TimerEvent: {}
+[2.955854] (motor_tests) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/motor_tests', 'build', '--build-base', '/home/ryan/treeclimber/build/motor_tests/build', 'install', '--record', '/home/ryan/treeclimber/build/motor_tests/install.log', '--single-version-externally-managed'], 'cwd': '/home/ryan/treeclimber/src/motor_tests', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ryan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ryan', 'OLDPWD': '/home/ryan', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '940', 'SYSTEMD_EXEC_PID': '1438', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2015', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ryan/treeclimber/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'ryan', 'JOURNAL_STREAM': '8:24990', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ryan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ryan-desktop:@/tmp/.ICE-unix/1418,unix/ryan-desktop:/tmp/.ICE-unix/1418', 'INVOCATION_ID': '3cffd29f22a9407e8cf95581cf710322', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/ryan/treeclimber/install/motor_tests:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:2e83ed41-3e35-485a-82e7-a4472aaeef4e', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ryan/treeclimber/build/motor_tests', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[3.023689] (-) TimerEvent: {}
+[3.124586] (-) TimerEvent: {}
+[3.225350] (-) TimerEvent: {}
+[3.326177] (-) TimerEvent: {}
+[3.427021] (-) TimerEvent: {}
+[3.527746] (-) TimerEvent: {}
+[3.628452] (-) TimerEvent: {}
+[3.729176] (-) TimerEvent: {}
+[3.829961] (-) TimerEvent: {}
+[3.930696] (-) TimerEvent: {}
+[4.031538] (-) TimerEvent: {}
+[4.132400] (-) TimerEvent: {}
+[4.144569] (motor_tests) StdoutLine: {'line': b'running egg_info\n'}
+[4.147475] (motor_tests) StdoutLine: {'line': b'writing ../../build/motor_tests/motor_tests.egg-info/PKG-INFO\n'}
+[4.148739] (motor_tests) StdoutLine: {'line': b'writing dependency_links to ../../build/motor_tests/motor_tests.egg-info/dependency_links.txt\n'}
+[4.149662] (motor_tests) StdoutLine: {'line': b'writing entry points to ../../build/motor_tests/motor_tests.egg-info/entry_points.txt\n'}
+[4.150509] (motor_tests) StdoutLine: {'line': b'writing requirements to ../../build/motor_tests/motor_tests.egg-info/requires.txt\n'}
+[4.151207] (motor_tests) StdoutLine: {'line': b'writing top-level names to ../../build/motor_tests/motor_tests.egg-info/top_level.txt\n'}
+[4.160120] (motor_tests) StdoutLine: {'line': b"reading manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'\n"}
+[4.165335] (motor_tests) StdoutLine: {'line': b"writing manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'\n"}
+[4.166192] (motor_tests) StdoutLine: {'line': b'running build\n'}
+[4.166915] (motor_tests) StdoutLine: {'line': b'running build_py\n'}
+[4.168933] (motor_tests) StdoutLine: {'line': b'copying motor_tests/grasp_motor_test.py -> /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests\n'}
+[4.173429] (motor_tests) StdoutLine: {'line': b'running install\n'}
+[4.174831] (motor_tests) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[4.175925] (motor_tests) StderrLine: {'line': b'  warnings.warn(\n'}
+[4.176665] (motor_tests) StdoutLine: {'line': b'running install_lib\n'}
+[4.179806] (motor_tests) StdoutLine: {'line': b'copying /home/ryan/treeclimber/build/motor_tests/build/lib/motor_tests/grasp_motor_test.py -> /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests\n'}
+[4.183992] (motor_tests) StdoutLine: {'line': b'byte-compiling /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests/grasp_motor_test.py to grasp_motor_test.cpython-310.pyc\n'}
+[4.186365] (motor_tests) StdoutLine: {'line': b'running install_data\n'}
+[4.188798] (motor_tests) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.195656] (motor_tests) StdoutLine: {'line': b"removing '/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[4.197486] (motor_tests) StdoutLine: {'line': b'Copying ../../build/motor_tests/motor_tests.egg-info to /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info\n'}
+[4.203337] (motor_tests) StdoutLine: {'line': b'running install_scripts\n'}
+[4.232627] (-) TimerEvent: {}
+[4.291353] (motor_tests) StdoutLine: {'line': b'Installing grasp_motor_test script to /home/ryan/treeclimber/install/motor_tests/lib/motor_tests\n'}
+[4.293466] (motor_tests) StdoutLine: {'line': b"writing list of installed files to '/home/ryan/treeclimber/build/motor_tests/install.log'\n"}
+[4.333166] (-) TimerEvent: {}
+[4.434502] (-) TimerEvent: {}
+[4.440929] (motor_tests) CommandEnded: {'returncode': 0}
+[4.515340] (motor_tests) JobEnded: {'identifier': 'motor_tests', 'rc': 0}
+[4.518231] (-) EventReactorShutdown: {}

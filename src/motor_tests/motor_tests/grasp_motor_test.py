@@ -12,7 +12,7 @@ UID_servo = "SNw"
 UID_io2 = "QAuAz"
 UID_master = "646H2t"
 
-if __name__ == '__main__':
+def main(args=None):
     msg = "hello people"
     print(msg)
 
@@ -22,8 +22,9 @@ if __name__ == '__main__':
     ipcon.connect(HOST, PORT)
 
     # Set settings 100, 50, 34, 
-    servo.set_period(0, 200)
+    servo.set_period(0, 50)
     servo.set_degree(0, 0, 6000)
+    servo.set_pulse_width(0, 10, 10)
     print(servo.get_degree(0))
     print(servo.get_period(0))
 
@@ -40,3 +41,6 @@ if __name__ == '__main__':
     print("Should have stopped")
 
     ipcon.disconnect()
+
+if __name__ == '__main__':
+    main()
