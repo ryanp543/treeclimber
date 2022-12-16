@@ -12,6 +12,12 @@ UID_servo = "SNw"
 UID_io2 = "QAuAz"
 UID_master = "646H2t"
 
+def cb_input_value(channel, changed, value):
+    print("Channel: " + str(channel))
+    print("Changed: " + str(changed))
+    print("Value: " + str(value))
+
+
 def main(args=None):
     msg = "hello people"
     print(msg)
@@ -21,9 +27,15 @@ def main(args=None):
     servo = BrickletServoV2(UID_servo, ipcon)
     ipcon.connect(HOST, PORT)
 
-    # Set settings 100, 50, 34, 
+    # Set settings of io bricklet
+    io.set_configuration(0, "o", False)
+    io.register_callback(io.CALLBACK_INPUT_VALUE, cb_input_value)
+    io.set_input_value_callback_configuration(1, 0, True)
+
+    # Set settings of servo bricklet 100, 50, 34, 
     servo.set_period(0, 50)
     servo.set_degree(0, 0, 6000)
+    servo.set_pulse_width(0, 50, 50)
     print(servo.get_degree(0))
     print(servo.get_period(0))
 
