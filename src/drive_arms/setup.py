@@ -1,0 +1,26 @@
+from setuptools import setup
+
+package_name = 'drive_arms'
+
+setup(
+    name=package_name,
+    version='0.0.0',
+    packages=[package_name],
+    data_files=[
+        ('share/ament_index/resource_index/packages',
+            ['resource/' + package_name]),
+        ('share/' + package_name, ['package.xml']),
+    ],
+    install_requires=['setuptools'],
+    zip_safe=True,
+    maintainer='ryan',
+    maintainer_email='rjmpoon@gmail.com',
+    description='Drives the grasping mechanisms for the arm and the wheels',
+    license='MIT',
+    tests_require=['pytest'],
+    entry_points={
+        'console_scripts': [
+            'spi_test = drive_arms.spi_test:main'
+        ],
+    },
+)

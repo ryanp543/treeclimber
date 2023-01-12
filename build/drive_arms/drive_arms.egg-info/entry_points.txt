@@ -1,0 +1,3 @@
+[console_scripts]
+spi_test = drive_arms.spi_test:main
+
