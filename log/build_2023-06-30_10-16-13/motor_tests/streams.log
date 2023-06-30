@@ -1,0 +1,23 @@
+[5.583s] Invoking command in '/home/ryan/treeclimber/src/motor_tests': PYTHONPATH=/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_tests build --build-base /home/ryan/treeclimber/build/motor_tests/build install --record /home/ryan/treeclimber/build/motor_tests/install.log --single-version-externally-managed
+[6.971s] running egg_info
+[6.976s] writing ../../build/motor_tests/motor_tests.egg-info/PKG-INFO
+[6.977s] writing dependency_links to ../../build/motor_tests/motor_tests.egg-info/dependency_links.txt
+[6.979s] writing entry points to ../../build/motor_tests/motor_tests.egg-info/entry_points.txt
+[6.981s] writing requirements to ../../build/motor_tests/motor_tests.egg-info/requires.txt
+[6.982s] writing top-level names to ../../build/motor_tests/motor_tests.egg-info/top_level.txt
+[6.992s] reading manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+[6.997s] writing manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+[6.998s] running build
+[6.999s] running build_py
+[7.000s] running install
+[7.010s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.011s]   warnings.warn(
+[7.013s] running install_lib
+[7.024s] running install_data
+[7.030s] running install_egg_info
+[7.033s] removing '/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info' (and everything under it)
+[7.035s] Copying ../../build/motor_tests/motor_tests.egg-info to /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info
+[7.045s] running install_scripts
+[7.155s] Installing grasp_motor_test script to /home/ryan/treeclimber/install/motor_tests/lib/motor_tests
+[7.172s] writing list of installed files to '/home/ryan/treeclimber/build/motor_tests/install.log'
+[7.437s] Invoked command in '/home/ryan/treeclimber/src/motor_tests' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_tests build --build-base /home/ryan/treeclimber/build/motor_tests/build install --record /home/ryan/treeclimber/build/motor_tests/install.log --single-version-externally-managed

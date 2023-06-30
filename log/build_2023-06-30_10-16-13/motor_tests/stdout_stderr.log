@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/motor_tests/motor_tests.egg-info/PKG-INFO
+writing dependency_links to ../../build/motor_tests/motor_tests.egg-info/dependency_links.txt
+writing entry points to ../../build/motor_tests/motor_tests.egg-info/entry_points.txt
+writing requirements to ../../build/motor_tests/motor_tests.egg-info/requires.txt
+writing top-level names to ../../build/motor_tests/motor_tests.egg-info/top_level.txt
+reading manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+writing manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+running install_data
+running install_egg_info
+removing '/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/motor_tests/motor_tests.egg-info to /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info
+running install_scripts
+Installing grasp_motor_test script to /home/ryan/treeclimber/install/motor_tests/lib/motor_tests
+writing list of installed files to '/home/ryan/treeclimber/build/motor_tests/install.log'

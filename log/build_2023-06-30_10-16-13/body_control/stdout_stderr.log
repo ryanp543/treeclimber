@@ -1,0 +1,33 @@
+running egg_info
+creating ../../build/body_control/body_control.egg-info
+writing ../../build/body_control/body_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt
+writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt
+writing requirements to ../../build/body_control/body_control.egg-info/requires.txt
+writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt
+writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ryan/treeclimber/build/body_control/build
+creating /home/ryan/treeclimber/build/body_control/build/lib
+creating /home/ryan/treeclimber/build/body_control/build/lib/body_control
+copying body_control/__init__.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/__init__.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/ryan/treeclimber/install/body_control/share/ament_index
+creating /home/ryan/treeclimber/install/body_control/share/ament_index/resource_index
+creating /home/ryan/treeclimber/install/body_control/share/ament_index/resource_index/packages
+copying resource/body_control -> /home/ryan/treeclimber/install/body_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/ryan/treeclimber/install/body_control/share/body_control
+running install_egg_info
+Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'
