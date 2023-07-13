@@ -6,7 +6,11 @@ import os
 import can
 import time
 
-def send_commands():
+def receive_status(msg):
+    id = msg.arbitration_id
+    data = msg.data
+
+def send_commands(bus):
 
     # Message IDs for different commands
     # 0x1 = wheel position (value, P, I, D)
@@ -24,7 +28,7 @@ def send_commands():
     feature_bytes = feature.encode()
 
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    values = [65535, 31230, 1510, 226] # 16 bit integers unsigned
+    values = [65535, 31231, 1510, 226] # 16 bit integers unsigned
     command = bytearray()
     for k in range (len(values)):
         command.extend(values[k].to_bytes(2, 'big')) 
@@ -33,17 +37,29 @@ def send_commands():
     print(len(command))
 
     # Open can bus interface and send the command
-    with can.interface.Bus(channel='can0', interface='socketcan', bitrate=1000000) as bus:
-        msg = can.Message(arbitration_id=msg_id, data=command, is_extended_id=False)
-        bus.send(msg)
+    msg = can.Message(arbitration_id=msg_id, data=command, is_extended_id=False)
+    bus.send(msg)
 
     print("Command sent!")
 
 if __name__ == "__main__":
+    # Run OS terminal commands to set up and open CANBus ports
     os.system('sudo /sbin/ip link set can0 down')
     os.system('sudo ip link set can0 type can bitrate 1000000')
     os.system('sudo ifconfig can0 up')
 
-    send_commands()
+    # Set up CAN bus object
+    bus = can.interface.Bus(channel='can0', interface='socketcan', bitrate=1000000)
 
+    # Set up CAN bus listener
+    notifier = can.Notifier(bus, [receive_status])
+
+    # Run appropriate function to send commands
+    send_commands(bus)
+
+    # Shutdown the bus
+    input("Press any key to shut down.")
+    print("Shutting down, finishing script.")
+    notifier.stop()
+    bus.shutdown()
     os.system('sudo ifconfig can0 down')
