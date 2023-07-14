@@ -10,6 +10,14 @@ def receive_status(msg):
     id = msg.arbitration_id
     data = msg.data
 
+    values_received = []
+    for k in range(0, len(data), 2):
+        value_new = (data[k] << 8) + data[k+1]
+        values_received.append(value_new)
+
+    print(id)
+    print(values_received)
+
 def send_commands(bus):
 
     # Message IDs for different commands
@@ -21,14 +29,14 @@ def send_commands(bus):
     # 0x6 = left tendon
     # 0x7 = right tendon
     # 0x8 = clippers
-    msg_id = 0x2
+    msg_id = 0x1
 
     # How to encode convert strings to bytes
     feature = "p"
     feature_bytes = feature.encode()
 
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    values = [65535, 31231, 1510, 226] # 16 bit integers unsigned
+    values = [65535, 31231, 1511, 226] # 16 bit integers unsigned
     command = bytearray()
     for k in range (len(values)):
         command.extend(values[k].to_bytes(2, 'big')) 
