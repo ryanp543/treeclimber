@@ -72,14 +72,14 @@ def create_command(id, value_list):
     
     # Creates a scaled value from each value in the value list
     # Converts it to bytes and adds it to the command byte array
-    # scaled_value_list = []
+    scaled_value_list = []
     cmd = bytearray()
     for k in range(len(value_list)):
         scaled_value = map_to_uint16(value_list[k], maximums[k], minimums[k])
-        # scaled_value_list.append(scaled_value)
+        scaled_value_list.append(scaled_value)
         cmd.extend(scaled_value.to_bytes(2, 'big')) 
     
-    # print(scaled_value_list)
+    print(scaled_value_list)
     print(cmd)
 
     # Returns the 8 bytes of data to be sent representing the uint_16 values
@@ -87,7 +87,8 @@ def create_command(id, value_list):
 
 
 # Function send_commands
-
+# TODO: SEND DIFFERENT COMMANDS AT A RAPID RATE TO MAKE SURE NO CORRUPTION
+# OF DATA ON THE RECEIVING END
 def send_commands(bus):
     # Message IDs for different commands
     # 0x1 = wheel position (value, P, I, D)
@@ -98,11 +99,12 @@ def send_commands(bus):
     # 0x6 = left tendon
     # 0x7 = right tendon
     # 0x8 = clippers
-    msg_id = 0x1
+    msg_id = 0x3
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
+    # command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
+    command = create_command(msg_id, [169.456, 0.0, 0.0, 0.0])
 
     # Open can bus interface and send the command
     msg = can.Message(arbitration_id=msg_id, data=command, is_extended_id=False)
