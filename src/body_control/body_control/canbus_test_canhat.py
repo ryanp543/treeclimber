@@ -67,6 +67,10 @@ def create_command(id, value_list):
         case 0x3:
             maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
             minimums = [SERVO_MIN, 0.0, 0.0, 0.0]
+        # ID 0x4: Left servo roll
+        case 0x4:
+            maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
+            minimums = [SERVO_MIN, 0.0, 0.0, 0.0]  
         case _:
             print("DESIRED COMMAND ID NOT WITHIN RANGE.")
     
@@ -99,16 +103,32 @@ def send_commands(bus):
     # 0x6 = left tendon
     # 0x7 = right tendon
     # 0x8 = clippers
-    msg_id = 0x3
+    msg1_id = 0x3
+    msg2_id = 0x4
+    msg3_id = 0x3
+    msg4_id = 0x4
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
     # command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
-    command = create_command(msg_id, [169.456, 0.0, 0.0, 0.0])
+    command1 = create_command(msg1_id, [270, 0.0, 0.0, 0.0])
+    command2 = create_command(msg2_id, [180, 0.0, 0.0, 0.0])
+    command3 = create_command(msg3_id, [0, 0.0, 0.0, 0.0])
+    command4 = create_command(msg4_id, [45, 0.0, 0.0, 0.0])
 
     # Open can bus interface and send the command
-    msg = can.Message(arbitration_id=msg_id, data=command, is_extended_id=False)
-    bus.send(msg)
+    msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
+    msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
+    msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
+    msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
+
+    bus.send(msg1)
+    time.sleep(0.5)
+    bus.send(msg2)
+    time.sleep(0.5)
+    bus.send(msg3)
+    time.sleep(0.1)
+    bus.send(msg4)
 
     print("Command sent!")
 
