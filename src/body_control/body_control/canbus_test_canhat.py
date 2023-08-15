@@ -19,6 +19,7 @@ KD_MIN = 0.0
 KI_MAX = 30.0
 KI_MIN = 0.0
 
+
 # Function receive_status
 # Callback function for incoming CANBus messages from the main body
 def receive_status(msg):
@@ -31,8 +32,9 @@ def receive_status(msg):
         values_received.append(value_new)
 
     if id == 0:
-        print(id)
-        print(values_received)
+        if values_received[0] == 1:
+            # print(id)
+            print(values_received)
 
 
 # Function map_to_uint16
@@ -55,22 +57,30 @@ def create_command(id, value_list):
     # Depending on id, creates a list of the relevant maximums and minimums
     # See comments in send_command function
     match id:
-        # ID 0x1: Position
-        case 0x1:
+        # ID 1: Position
+        case 1:
             maximums = [POS_MAX, KP_MAX, KD_MAX, KI_MAX]
             minimums = [POS_MIN, KP_MIN, KD_MIN, KI_MIN]
-        # ID 0x2: Velocity
-        case 0x2:
+        # ID 2: Velocity
+        case 2:
             maximums = [VEL_MAX, KP_MAX, KD_MAX, KI_MAX]
             minimums = [VEL_MIN, KP_MIN, KD_MIN, KI_MIN]
-        # ID 0x3: Main servo roll
-        case 0x3:
+        # ID 3: Main servo roll
+        case 3:
             maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
             minimums = [SERVO_MIN, 0.0, 0.0, 0.0]
-        # ID 0x4: Left servo roll
-        case 0x4:
+        # ID 4: Left servo roll
+        case 4:
             maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
-            minimums = [SERVO_MIN, 0.0, 0.0, 0.0]  
+            minimums = [SERVO_MIN, 0.0, 0.0, 0.0]
+        # ID 10: Enable motor (resets encoders)
+        case 8:
+            maximums = [1.0, 1.0, 1.0, 1.0]
+            minimums = [0.0, 0.0, 0.0, 0.0]  
+        # ID 11: Get drive encoder data
+        case 11:
+            maximums = [1.0, 1.0, 1.0, 1.0]
+            minimums = [0.0, 0.0, 0.0, 0.0]  
         case _:
             print("DESIRED COMMAND ID NOT WITHIN RANGE.")
     
@@ -103,32 +113,36 @@ def send_commands(bus):
     # 0x6 = left tendon
     # 0x7 = right tendon
     # 0x8 = clippers
-    msg1_id = 0x3
-    msg2_id = 0x4
-    msg3_id = 0x3
-    msg4_id = 0x4
+    # 0xa = enable motor (i.e. reset encoders)
+    # 0xb = get drive encoder data
+    msg1_id = 1
+    msg2_id = 8
+    # msg3_id = 0x3
+    # msg4_id = 0x4
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
     # command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
-    command1 = create_command(msg1_id, [270, 0.0, 0.0, 0.0])
-    command2 = create_command(msg2_id, [180, 0.0, 0.0, 0.0])
-    command3 = create_command(msg3_id, [0, 0.0, 0.0, 0.0])
-    command4 = create_command(msg4_id, [45, 0.0, 0.0, 0.0])
+    command1 = create_command(msg1_id, [6.0, 40.04, 5.6, 10.001])
+    command2 = create_command(msg2_id, [0.0, 0.0, 0.0, 0.0])
+    # command3 = create_command(msg3_id, [0, 0.0, 0.0, 0.0])
+    # command4 = create_command(msg4_id, [45, 0.0, 0.0, 0.0])
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
     msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
-    msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
-    msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
+    # msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
+    # msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
 
     bus.send(msg1)
-    time.sleep(0.5)
+    print("Sent first message")
+    time.sleep(3)
     bus.send(msg2)
-    time.sleep(0.5)
-    bus.send(msg3)
-    time.sleep(0.1)
-    bus.send(msg4)
+    print("Sent second message")
+    # time.sleep(0.5)
+    # bus.send(msg3)
+    # time.sleep(0.1)
+    # bus.send(msg4)
 
     print("Command sent!")
 
