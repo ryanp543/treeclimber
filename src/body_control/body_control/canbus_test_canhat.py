@@ -5,6 +5,8 @@
 import os
 import can
 import time
+import math
+import matplotlib.pyplot as plt
 
 POS_MAX = 31.0         # 10pi =~ 31 rad (around 5 whole rotations)
 POS_MIN = -31.0
@@ -19,10 +21,14 @@ KD_MIN = 0.0
 KI_MAX = 30.0
 KI_MIN = 0.0
 
+position_data = []
+
 
 # Function receive_status
 # Callback function for incoming CANBus messages from the main body
 def receive_status(msg):
+    global position_data
+
     id = msg.arbitration_id
     data = msg.data
 
@@ -34,12 +40,17 @@ def receive_status(msg):
     if id == 0:
         if values_received[0] == 1:
             # print(id)
-            print(values_received)
+            # print(values_received)
+            position_data.append(values_received)
+            # print(len(position_data))
+
+            if values_received[-3:] == [0, 0, 0]:
+                print("All data collected!")
 
 
 # Function map_to_uint16
 # Takes a value, a maximum, and a minimum and outputs a 16 bit integer that
-# represents the value between the bounds. Note that any value above the max
+# represents the value between the bounds. Note that any val    print(position_data[-1])ue above the max
 # or below the min will be set to the max or the min, respectively. 
 def map_to_uint16(value, max_value, min_value):
     value_range = max_value - min_value
@@ -47,6 +58,12 @@ def map_to_uint16(value, max_value, min_value):
     scaled_value = int(((value - min_value) / value_range) * 65535)
 
     return scaled_value & 0xFFFF
+
+
+# 
+def map_to_float(value, max_value, min_value):
+    scaled_float = min_value + (value * (max_value-min_value) / (2**16-1))
+    return scaled_float
 
 
 # Function create_command
@@ -117,13 +134,13 @@ def send_commands(bus):
     # 0xb = get drive encoder data
     msg1_id = 1
     msg2_id = 8
-    # msg3_id = 0x3
+    # msg3_id = 0x3 
     # msg4_id = 0x4
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
     # command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
-    command1 = create_command(msg1_id, [6.0, 40.04, 5.6, 10.001])
+    command1 = create_command(msg1_id, [2*math.pi, 40.04, 5.6, 10.001])
     command2 = create_command(msg2_id, [0.0, 0.0, 0.0, 0.0])
     # command3 = create_command(msg3_id, [0, 0.0, 0.0, 0.0])
     # command4 = create_command(msg4_id, [45, 0.0, 0.0, 0.0])
@@ -145,6 +162,46 @@ def send_commands(bus):
     # bus.send(msg4)
 
     print("Command sent!")
+
+# Function plot_data
+# This function processes and plots the encoder data received over CANBus from Teensy
+def plot_data():
+    global position_data
+
+    print(len(position_data))
+    t = []
+    pos = []
+
+    # If data received is for position
+    if position_data[0][0] == 1:
+        t_start = (position_data[0][1] << 16) | position_data[0][2]
+
+        for k in range(len(position_data)):
+            if position_data[k] != [1, 0, 0, 0]: 
+                t_at_k = (position_data[k][1] << 16) | position_data[k][2]
+                pos_at_k = map_to_float(position_data[k][3], POS_MAX, POS_MIN)
+
+                t.append((t_at_k - t_start)/1000)
+                pos.append(pos_at_k)
+            else:
+                del t[-1]
+                del pos[-1]
+                break
+    else:
+        print("This data is for something else")
+    
+    print(len(pos))
+    # print(pos[-1])
+    # print(t[-1])
+    print(position_data[-2])
+    print(position_data[-3])
+    plt.plot(t, pos)
+    plt.grid(True)
+    plt.xlabel("Time (s)")
+    plt.ylabel("Position (rad)")
+    plt.show()
+
+    position_data = []
 
 
 if __name__ == "__main__":
@@ -168,3 +225,6 @@ if __name__ == "__main__":
     notifier.stop()
     bus.shutdown()
     os.system('sudo ifconfig can0 down')
+
+    # Plot data
+    plot_data()
