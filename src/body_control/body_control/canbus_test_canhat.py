@@ -16,7 +16,7 @@ SERVO_MAX = 270.0
 SERVO_MIN = 0.0
 KP_MAX = 100.0
 KP_MIN = 0.0
-KD_MAX = 10.0
+KD_MAX = 5.0
 KD_MIN = 0.0
 KI_MAX = 30.0
 KI_MIN = 0.0
@@ -132,34 +132,36 @@ def send_commands(bus):
     # 0x8 = clippers
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
-    msg1_id = 1
+    msg1_id = 2
     msg2_id = 8
-    # msg3_id = 0x3 
-    # msg4_id = 0x4
+    msg3_id = 3 
+    msg4_id = 4
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
     # command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
-    command1 = create_command(msg1_id, [2*math.pi, 40.04, 5.6, 10.001])
+    command1 = create_command(msg1_id, [math.pi, 40, 2, 0.1])
     command2 = create_command(msg2_id, [0.0, 0.0, 0.0, 0.0])
-    # command3 = create_command(msg3_id, [0, 0.0, 0.0, 0.0])
-    # command4 = create_command(msg4_id, [45, 0.0, 0.0, 0.0])
+    command3 = create_command(msg3_id, [183, 0.0, 0.0, 0.0])
+    command4 = create_command(msg4_id, [5, 0.0, 0.0, 0.0])
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
     msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
-    # msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
-    # msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
+    msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
+    msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
 
     bus.send(msg1)
     print("Sent first message")
-    time.sleep(3)
+
     bus.send(msg2)
     print("Sent second message")
-    # time.sleep(0.5)
+
     # bus.send(msg3)
-    # time.sleep(0.1)
+    # print("Sent third message")
+
     # bus.send(msg4)
+    # print("Sent fourth message")
 
     print("Command sent!")
 
@@ -171,6 +173,7 @@ def plot_data():
     print(len(position_data))
     t = []
     pos = []
+    vel = []
 
     # If data received is for position
     if position_data[0][0] == 1:
@@ -189,12 +192,15 @@ def plot_data():
                 break
     else:
         print("This data is for something else")
+
+    # Create an array of velocity from position and time arrays pos and t
+    for k in range(1, len(t)):
+        print(k)
+        new_vel = (pos[k] - pos[k-1]) / (t[k] - t[k-1])
+        vel.append(new_vel)
     
-    print(len(pos))
-    # print(pos[-1])
-    # print(t[-1])
-    print(position_data[-2])
-    print(position_data[-3])
+    print(pos[-1])
+    print(vel[-1])
     plt.plot(t, pos)
     plt.grid(True)
     plt.xlabel("Time (s)")
