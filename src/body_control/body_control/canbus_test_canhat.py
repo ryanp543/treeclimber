@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 
 POS_MAX = 31.0         # 10pi =~ 31 rad (around 5 whole rotations)
 POS_MIN = -31.0
-VEL_MAX = 4.0          # 41 rpm =~ 4 rad/s for 70 kg-cm torque
-VEL_MIN = -4.0
+VEL_MAX = 8.0          # 74 rpm =~ 8 rad/s for 70 kg-cm torque
+VEL_MIN = -8.0
 SERVO_MAX = 270.0
 SERVO_MIN = 0.0
 KP_MAX = 100.0
@@ -132,18 +132,19 @@ def send_commands(bus):
     # 0x8 = clippers
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
-    msg1_id = 2
+    msg1_id = 1
     msg2_id = 8
-    msg3_id = 3 
-    msg4_id = 4
+    msg3_id = 2 
+    msg4_id = 8
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    # command = create_command(msg_id, [-24.6, 40.05, 7.2, 0.4])
-    command1 = create_command(msg1_id, [math.pi, 40, 2, 0.1])
-    command2 = create_command(msg2_id, [0.0, 0.0, 0.0, 0.0])
-    command3 = create_command(msg3_id, [183, 0.0, 0.0, 0.0])
-    command4 = create_command(msg4_id, [5, 0.0, 0.0, 0.0])
+    command1 = create_command(msg1_id, [2*math.pi, 40, 2, 0.1]) # for position control
+    command2 = create_command(msg2_id, [0, 0, 0, 0])
+    # command1 = create_command(msg1_id, [-math.pi/4, 2, 2, 20]) 
+    # command2 = create_command(msg2_id, [1.5*math.pi, 2.0, 2.0, 20])
+    command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
+    command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
@@ -172,6 +173,7 @@ def plot_data():
 
     print(len(position_data))
     t = []
+    t_vel = []
     pos = []
     vel = []
 
@@ -194,17 +196,26 @@ def plot_data():
         print("This data is for something else")
 
     # Create an array of velocity from position and time arrays pos and t
-    for k in range(1, len(t)):
-        print(k)
-        new_vel = (pos[k] - pos[k-1]) / (t[k] - t[k-1])
+    inc = 5
+    for k in range(inc+1, len(t), inc):
+        new_vel = (pos[k] - pos[k-inc]) / (t[k] - t[k-inc])
         vel.append(new_vel)
+        t_vel.append(t[k])
     
     print(pos[-1])
     print(vel[-1])
-    plt.plot(t, pos)
-    plt.grid(True)
-    plt.xlabel("Time (s)")
-    plt.ylabel("Position (rad)")
+
+    fig, axs = plt.subplots(2, 1)
+    axs[0].plot(t, pos)
+    axs[0].grid(True)
+    axs[0].set_xlabel("Time (s)")
+    axs[0].set_ylabel("Position (rad)")
+
+    axs[1].plot(t_vel, vel)
+    axs[1].grid(True)
+    axs[1].set_xlabel("Time (s)")
+    axs[1].set_ylabel("Velocity (rad/s)")
+
     plt.show()
 
     position_data = []
