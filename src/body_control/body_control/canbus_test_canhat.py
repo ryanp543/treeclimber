@@ -14,6 +14,7 @@ VEL_MAX = 8.0          # 74 rpm =~ 8 rad/s for 70 kg-cm torque
 VEL_MIN = -8.0
 SERVO_MAX = 270.0
 SERVO_MIN = 0.0
+NUM_SERVOS = 3
 KP_MAX = 100.0
 KP_MIN = 0.0
 KD_MAX = 5.0
@@ -84,8 +85,8 @@ def create_command(id, value_list):
             minimums = [VEL_MIN, KP_MIN, KD_MIN, KI_MIN]
         # ID 3: Main servo roll
         case 3:
-            maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
-            minimums = [SERVO_MIN, 0.0, 0.0, 0.0]
+            maximums = [NUM_SERVOS, SERVO_MAX, 1.0, 1.0]
+            minimums = [1.0, SERVO_MIN, 0.0, 0.0]
         # ID 4: Left servo roll
         case 4:
             maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
@@ -122,27 +123,28 @@ def create_command(id, value_list):
 # OF DATA ON THE RECEIVING END
 def send_commands(bus):
     # Message IDs for different commands
-    # 0x1 = wheel position (value, P, I, D)
-    # 0x2 = wheel velocity
-    # 0x3 = main servo roll
-    # 0x4 = left servo (facing back from tail counterweight)
+    # 0x1 = wheel position (value, P, I, D)    # 0x4 = left servo (facing back from tail counterweight)
     # 0x5 = right servo (facing back from tail counterweight)
-    # 0x6 = left tendon
-    # 0x7 = right tendon
+    # 0x2 = wheel velocity
+    # 0x3 = (facing from back tail counterweight) main = 1, left = 2, right = 3 servo roll
+    # 0x4 = left tendon
+    # 0x5 = right tendon
     # 0x8 = clippers
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
-    msg1_id = 1
-    msg2_id = 8
+    msg1_id = 3
+    msg2_id = 3
     msg3_id = 2 
     msg4_id = 8
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    command1 = create_command(msg1_id, [2*math.pi, 40, 2, 0.1]) # for position control
-    command2 = create_command(msg2_id, [0, 0, 0, 0])
-    # command1 = create_command(msg1_id, [-math.pi/4, 2, 2, 20]) 
+    # command1 = create_command(msg1_id, [2*math.pi, 40, 2, 0.1]) # for position control
+    # command2 = create_command(msg2_id, [0, 0, 0, 0])
+    # command1 = create_command(msg1_id, [-math.pi/4, 2, 2, 20]) # for velocity control
     # command2 = create_command(msg2_id, [1.5*math.pi, 2.0, 2.0, 20])
+    command1 = create_command(msg1_id, [1, 180, 0.0, 0.0]) # for servo control
+    command2 = create_command(msg2_id, [2, 220, 0, 0])
     command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
     command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
 
