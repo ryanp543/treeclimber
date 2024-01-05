@@ -15,6 +15,8 @@ VEL_MIN = -8.0
 SERVO_MAX = 270.0
 SERVO_MIN = 0.0
 NUM_SERVOS = 3
+TORQUE_MAX = 6.5        # [N*m], 70 kg stall torque = ~6.8 N*m
+TORQUE_MIN = -6.5
 KP_MAX = 100.0
 KP_MIN = 0.0
 KD_MAX = 5.0
@@ -39,6 +41,7 @@ def receive_status(msg):
         values_received.append(value_new)
 
     if id == 0:
+
         if values_received[0] == 1:
             # print(id)
             # print(values_received)
@@ -87,10 +90,11 @@ def create_command(id, value_list):
         case 3:
             maximums = [NUM_SERVOS, SERVO_MAX, 1.0, 1.0]
             minimums = [1.0, SERVO_MIN, 0.0, 0.0]
-        # ID 4: Left servo roll
+        # ID 4: Left tendon torque control
         case 4:
-            maximums = [SERVO_MAX, 1.0, 1.0, 1.0]
-            minimums = [SERVO_MIN, 0.0, 0.0, 0.0]
+            maximums = [TORQUE_MAX, KP_MAX, KD_MAX, KI_MAX]
+            minimums = [TORQUE_MIN, KP_MIN, KD_MIN, KI_MIN]
+
         # ID 10: Enable motor (resets encoders)
         case 8:
             maximums = [1.0, 1.0, 1.0, 1.0]
@@ -107,7 +111,8 @@ def create_command(id, value_list):
     scaled_value_list = []
     cmd = bytearray()
     for k in range(len(value_list)):
-        scaled_value = map_to_uint16(value_list[k], maximums[k], minimums[k])
+        scaled_value = map_to_uint16(value_list[k], maximums[k],
+ minimums[k])
         scaled_value_list.append(scaled_value)
         cmd.extend(scaled_value.to_bytes(2, 'big')) 
     
@@ -132,8 +137,8 @@ def send_commands(bus):
     # 0x8 = clippers
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
-    msg1_id = 3
-    msg2_id = 3
+    msg1_id = 4
+    msg2_id = 4
     msg3_id = 2 
     msg4_id = 8
 
@@ -141,24 +146,36 @@ def send_commands(bus):
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
     # command1 = create_command(msg1_id, [2*math.pi, 40, 2, 0.1]) # for position control
     # command2 = create_command(msg2_id, [0, 0, 0, 0])
-    # command1 = create_command(msg1_id, [-math.pi/4, 2, 2, 20]) # for velocity control
-    # command2 = create_command(msg2_id, [1.5*math.pi, 2.0, 2.0, 20])
-    command1 = create_command(msg1_id, [1, 180, 0.0, 0.0]) # for servo control
+
+    # command1 = create_command(msg1_id, [1, 180, 0.0, 0.0]) # for servo control
+    # command2 = create_command(msg2_id, [2, 220, 0, 0])
+
+    # command1 = create_command(msg1_id, [-math.pi/4, 2, 0.2, 20]) # for velocity control
+    # command2 = create_command(msg2_id, [1.5*math.pi, 2.0, 0.2, 20])
+    # command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
+    # command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
+
+
+    command1 = create_command(msg1_id, [1.54, 31, 4.4, 0.3]) # for torque control
     command2 = create_command(msg2_id, [2, 220, 0, 0])
-    command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
-    command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
+
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
     msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
-    msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
-    msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
+    # msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
+    # msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
 
     bus.send(msg1)
     print("Sent first message")
 
-    bus.send(msg2)
-    print("Sent second message")
+
+    # time.sleep(3)
+
+    # bus.send(msg2)
+    # print("Sent second message")
+
+    # time.sleep(3)
 
     # bus.send(msg3)
     # print("Sent third message")
