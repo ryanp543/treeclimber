@@ -12,17 +12,19 @@ POS_MAX = 31.0         # 10pi =~ 31 rad (around 5 whole rotations)
 POS_MIN = -31.0
 VEL_MAX = 8.0          # 74 rpm =~ 8 rad/s for 70 kg-cm torque
 VEL_MIN = -8.0
+TURR_MAX = 12.5
+TURR_MIN = -12.5
 SERVO_MAX = 270.0
 SERVO_MIN = 0.0
 NUM_SERVOS = 3
 TORQUE_MAX = 6.5        # [N*m], 70 kg stall torque = ~6.8 N*m
 TORQUE_MIN = -6.5
 KP_MAX = 100.0
-KP_MIN = 0.0
+KP_MIN = -1.0
 KD_MAX = 5.0
-KD_MIN = 0.0
+KD_MIN = -1.0
 KI_MAX = 30.0
-KI_MIN = 0.0
+KI_MIN = -1.0
 
 position_data = []
 
@@ -86,16 +88,18 @@ def create_command(id, value_list):
         case 2:
             maximums = [VEL_MAX, KP_MAX, KD_MAX, KI_MAX]
             minimums = [VEL_MIN, KP_MIN, KD_MIN, KI_MIN]
-        # ID 3: Main servo roll
+        # ID 3: Turret motor position
         case 3:
-            maximums = [NUM_SERVOS, SERVO_MAX, 1.0, 1.0]
-            minimums = [1.0, SERVO_MIN, 0.0, 0.0]
+            maximums = [TURR_MAX, KP_MAX, KD_MAX, KI_MAX]
+            minimums = [TURR_MIN, KP_MIN, KD_MIN, KI_MIN]
         # ID 4: Left tendon torque control
         case 4:
-            maximums = [TORQUE_MAX, KP_MAX, KD_MAX, KI_MAX]
-            minimums = [TORQUE_MIN, KP_MIN, KD_MIN, KI_MIN]
-
-        # ID 10: Enable motor (resets encoders)
+            maximums = [TORQUE_MAX, POS_MAX, KP_MAX, KI_MAX]
+            minimums = [TORQUE_MIN, POS_MIN, KP_MIN, KI_MIN]
+        # ID 6: Left and right servo rolls
+        case 6: 
+            maximums = [NUM_SERVOS, SERVO_MAX, 1.0, 1.0]
+            minimums = [1.0, SERVO_MIN, 0.0, 0.0]
         case 8:
             maximums = [1.0, 1.0, 1.0, 1.0]
             minimums = [0.0, 0.0, 0.0, 0.0]  
@@ -128,47 +132,46 @@ def create_command(id, value_list):
 # OF DATA ON THE RECEIVING END
 def send_commands(bus):
     # Message IDs for different commands
-    # 0x1 = wheel position (value, P, I, D)    # 0x4 = left servo (facing back from tail counterweight)
-    # 0x5 = right servo (facing back from tail counterweight)
+    # 0x1 = wheel position (value, P, I, D)
     # 0x2 = wheel velocity
-    # 0x3 = (facing from back tail counterweight) main = 1, left = 2, right = 3 servo roll
+    # 0x3 = turret motor position
     # 0x4 = left tendon
     # 0x5 = right tendon
-    # 0x8 = clippers
+    # 0x6 = (facing from back tail counterweight) left = 2, right = 3 servo roll
+    # 0x7 = clippers
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
-    msg1_id = 4
-    msg2_id = 4
+    msg1_id = 3
+    msg2_id = 2
     msg3_id = 2 
     msg4_id = 8
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    # command1 = create_command(msg1_id, [2*math.pi, 40, 2, 0.1]) # for position control
+    # command1 = create_command(msg1_id, [-math.pi, 40, 1, 0.1]) # for position control
     # command2 = create_command(msg2_id, [0, 0, 0, 0])
 
-    # command1 = create_command(msg1_id, [1, 180, 0.0, 0.0]) # for servo control
-    # command2 = create_command(msg2_id, [2, 220, 0, 0])
+    # command1 = create_command(msg1_id, [1, 10, 0.0, 0.0]) # for servo control
+    # command2 = create_command(msg2_id, [2, 150, 0, 0])
 
-    # command1 = create_command(msg1_id, [-math.pi/4, 2, 0.2, 20]) # for velocity control
-    # command2 = create_command(msg2_id, [1.5*math.pi, 2.0, 0.2, 20])
+    # command1 = create_command(msg1_id, [math.pi/3, 2, 0.2, 20]) # for velocity control
+    # command2 = create_command(msg2_id, [-math.pi/3, 2.0, 0.2, 20])
     # command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
     # command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
 
 
-    command1 = create_command(msg1_id, [1.54, 31, 4.4, 0.3]) # for torque control
-    command2 = create_command(msg2_id, [2, 220, 0, 0])
+    command1 = create_command(msg1_id, [3.1415, 40.2, 1, 0.1]) # for torque control
+    # command2 = create_command(msg2_id, [2, 220, 0, 0])
 
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
-    msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
+    # msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
     # msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
     # msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
 
     bus.send(msg1)
     print("Sent first message")
-
 
     # time.sleep(3)
 
@@ -217,23 +220,23 @@ def plot_data():
     # Create an array of velocity from position and time arrays pos and t
     inc = 5
     for k in range(inc+1, len(t), inc):
-        new_vel = (pos[k] - pos[k-inc]) / (t[k] - t[k-inc])
+        new_vel = 0 # (pos[k] - pos[k-inc]) / (t[k] - t[k-inc])
         vel.append(new_vel)
         t_vel.append(t[k])
     
     print(pos[-1])
     print(vel[-1])
 
-    fig, axs = plt.subplots(2, 1)
-    axs[0].plot(t, pos)
-    axs[0].grid(True)
-    axs[0].set_xlabel("Time (s)")
-    axs[0].set_ylabel("Position (rad)")
+    # fig, axs = plt.subplots(2, 1)
+    plt.plot(t, pos)
+    plt.grid(True)
+    plt.xlabel("Time (s)")
+    plt.ylabel("Position (rad)")
 
-    axs[1].plot(t_vel, vel)
-    axs[1].grid(True)
-    axs[1].set_xlabel("Time (s)")
-    axs[1].set_ylabel("Velocity (rad/s)")
+    # axs[1].plot(t_vel, vel)
+    # axs[1].grid(True)
+    # axs[1].set_xlabel("Time (s)")
+    # axs[1].set_ylabel("Velocity (rad/s)")
 
     plt.show()
 
