@@ -142,7 +142,7 @@ def send_commands(bus):
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
     msg1_id = 3
-    msg2_id = 2
+    msg2_id = 3
     msg3_id = 2 
     msg4_id = 8
 
@@ -160,18 +160,28 @@ def send_commands(bus):
     # command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
 
 
-    command1 = create_command(msg1_id, [3.1415, 40.2, 1, 0.1]) # for torque control
-    # command2 = create_command(msg2_id, [2, 220, 0, 0])
+    command1 = create_command(msg1_id, [3.1415, 10, 1, 0.1]) # for torque control
+    command2 = create_command(msg2_id, [-3.1415, 220, 0, 0])
 
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
-    # msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
+    msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
     # msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
     # msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
 
     bus.send(msg1)
     print("Sent first message")
+    # time.sleep(3)
+    
+    # for k in range(5):
+    #     bus.send(msg1)
+    #     print("Sent first message")
+    #     time.sleep(3)
+
+    #     bus.send(msg2)
+    #     print("Sent second message") 
+    #     time.sleep(3)
 
     # time.sleep(3)
 
