@@ -160,7 +160,7 @@ def send_commands(bus):
     # command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
 
 
-    command1 = create_command(msg1_id, [3.1415, 10, 1, 0.1]) # for torque control
+    command1 = create_command(msg1_id, [6, 20, 0.7, 0.4]) # for torque control
     command2 = create_command(msg2_id, [-3.1415, 220, 0, 0])
 
 
