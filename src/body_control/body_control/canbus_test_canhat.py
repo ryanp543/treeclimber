@@ -141,27 +141,29 @@ def send_commands(bus):
     # 0x7 = clippers
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
-    msg1_id = 3
-    msg2_id = 3
+    msg1_id = 4
+    msg2_id = 4
     msg3_id = 2 
-    msg4_id = 8
+    msg4_id = 6
 
     # Take command and maps to unsigned 16 bit integer values
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
-    # command1 = create_command(msg1_id, [-math.pi, 40, 1, 0.1]) # for position control
+    # command1 = create_command(msg1_id, [2*math.pi, 40, 1, 0.1]) # for position control
     # command2 = create_command(msg2_id, [0, 0, 0, 0])
 
-    # command1 = create_command(msg1_id, [1, 10, 0.0, 0.0]) # for servo control
-    # command2 = create_command(msg2_id, [2, 150, 0, 0])
+    # command1 = create_command(msg1_id, [1, 180, 0.0, 0.0]) # for servo control
+    # command2 = create_command(msg2_id, [2, 180, 0, 0])
 
-    # command1 = create_command(msg1_id, [math.pi/3, 2, 0.2, 20]) # for velocity control
-    # command2 = create_command(msg2_id, [-math.pi/3, 2.0, 0.2, 20])
+    # command1 = create_command(msg1_id, [math.pi/3, 10.0, 0, 0.1]) # for velocity control
+    # command2 = create_command(msg2_id, [-math.pi/3, 10.0, 0, 0.1])
     # command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
-    # command4 = create_command(msg4_id, [0.0, 0.0, 0.0, 0.0])
+    # command4 = create_command(msg4_id, [1, 0.0, 0.0, 0.0])
 
+    # command1 = create_command(msg1_id, [6, 20, 0.7, 0.4]) # for turret motor control
+    # command2 = create_command(msg2_id, [-6, 220, 0, 0])
 
-    command1 = create_command(msg1_id, [6, 20, 0.7, 0.4]) # for torque control
-    command2 = create_command(msg2_id, [-3.1415, 220, 0, 0])
+    command1 = create_command(msg1_id, [4.4145, 3, 1, 2.2]) 
+    command2 = create_command(msg2_id, [0, -0.2, 0, 0])
 
 
     # Open can bus interface and send the command
@@ -172,7 +174,7 @@ def send_commands(bus):
 
     bus.send(msg1)
     print("Sent first message")
-    # time.sleep(3)
+    time.sleep(3)
     
     # for k in range(5):
     #     bus.send(msg1)
@@ -185,13 +187,15 @@ def send_commands(bus):
 
     # time.sleep(3)
 
-    # bus.send(msg2)
-    # print("Sent second message")
+    bus.send(msg2)
+    print("Sent second message")
 
-    # time.sleep(3)
+    time.sleep(3)
 
     # bus.send(msg3)
     # print("Sent third message")
+
+    # time.sleep(2)
 
     # bus.send(msg4)
     # print("Sent fourth message")
