@@ -146,7 +146,7 @@ def send_commands(bus):
     # 0xa = enable motor (i.e. reset encoders)
     # 0xb = get drive encoder data
     msg1_id = 3
-    msg2_id = 5
+    msg2_id = 3
     msg3_id = 2 
     msg4_id = 6
 
@@ -154,17 +154,17 @@ def send_commands(bus):
     # Message packet is 8 bytes, typically four 16 bit unsigned integers
     # command1 = create_command(msg1_id, [2*math.pi, 40, 1, 0.1]) # for position control
     # command2 = create_command(msg2_id, [0, 0, 0, 0])
-        # ID 4: Left tendon torque control
 
     # command1 = create_command(msg1_id, [1, 180, 0.0, 0.0]) # for servo control
     # command2 = create_command(msg2_id, [2, 180, 0, 0])
 
-    # command1 = create_command(msg1_id, [math.pi/3, 10.0, 0, 0.1]) # for velocity control
-    # command2 = create_command(msg2_id, [-math.pi/3, 10.0, 0, 0.1])
+    # command1 = create_command(msg1_id, [1.5*math.pi, 10.0, 0, 0.1]) # for velocity control
+    # command2 = create_command(msg2_id, [-1.5*math.pi, 10.0, 0, 0.1])
     # command3 = create_command(msg3_id, [0.0, 2.0, 2.0, 20])
     # command4 = create_command(msg4_id, [1, 0.0, 0.0, 0.0])
 
-    command1 = create_command(msg1_id, [6, 20, 0.7, 0.4]) # for turret motor control
+    command1 = create_command(msg1_id, [-math.pi/2, 25, 2, 5]) # for turret motor control
+    command2 = create_command(msg1_id, [math.pi/2, 25, 2, 5]) # for turret motor control
 
     # command1 = create_command(msg1_id, [-3, 3, 1, 2.2]) # for tendon motor control
     # command2 = create_command(msg2_id, [0, 0.2, 0, 0])
@@ -172,33 +172,20 @@ def send_commands(bus):
 
     # Open can bus interface and send the command
     msg1 = can.Message(arbitration_id=msg1_id, data=command1, is_extended_id=False)
-    # msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
+    msg2 = can.Message(arbitration_id=msg2_id, data=command2, is_extended_id=False)
     # msg3 = can.Message(arbitration_id=msg3_id, data=command3, is_extended_id=False)
     # msg4 = can.Message(arbitration_id=msg4_id, data=command4, is_extended_id=False)
 
     bus.send(msg1)
     print("Sent first message")
-    time.sleep(3)
-    
-    # for k in range(5):
-    #     bus.send(msg1)
-    #     print("Sent first message")
-    #     time.sleep(3)
+    time.sleep(5)
 
-    #     bus.send(msg2)
-    #     print("Sent second message") 
-    #     time.sleep(3)
-
-    # time.sleep(3)
-
-    # bus.send(msg2)
-    # print("Sent second message")
-
-    # time.sleep(3)
+    bus.send(msg2)
+    print("Sent second message")
+    time.sleep(5)
 
     # bus.send(msg3)
     # print("Sent third message")
-
     # time.sleep(2)
 
     # bus.send(msg4)
