@@ -9,6 +9,8 @@ setup.py
 ../../build/body_control/body_control.egg-info/top_level.txt
 ../../build/body_control/body_control.egg-info/zip-safe
 body_control/__init__.py
+body_control/canbus_test_canhat.py
+body_control/pcb_test_full.py
 resource/body_control
 test/test_copyright.py
 test/test_flake8.py
