@@ -1,0 +1,252 @@
+[0.000000] (-) TimerEvent: {}
+[0.000979] (body_control) JobQueued: {'identifier': 'body_control', 'dependencies': OrderedDict()}
+[0.002025] (drive_arms) JobQueued: {'identifier': 'drive_arms', 'dependencies': OrderedDict()}
+[0.002689] (motor_tests) JobQueued: {'identifier': 'motor_tests', 'dependencies': OrderedDict()}
+[0.003194] (tail_control) JobQueued: {'identifier': 'tail_control', 'dependencies': OrderedDict()}
+[0.003610] (body_control) JobStarted: {'identifier': 'body_control'}
+[0.099166] (-) TimerEvent: {}
+[0.199969] (-) TimerEvent: {}
+[0.303764] (-) TimerEvent: {}
+[0.404646] (-) TimerEvent: {}
+[0.508570] (-) TimerEvent: {}
+[0.610609] (-) TimerEvent: {}
+[0.620310] (drive_arms) JobStarted: {'identifier': 'drive_arms'}
+[0.710789] (-) TimerEvent: {}
+[0.813975] (-) TimerEvent: {}
+[0.915186] (-) TimerEvent: {}
+[1.017558] (-) TimerEvent: {}
+[1.035977] (motor_tests) JobStarted: {'identifier': 'motor_tests'}
+[1.117832] (-) TimerEvent: {}
+[1.218576] (-) TimerEvent: {}
+[1.319684] (-) TimerEvent: {}
+[1.420863] (-) TimerEvent: {}
+[1.428402] (tail_control) JobStarted: {'identifier': 'tail_control'}
+[1.521021] (-) TimerEvent: {}
+[1.621823] (-) TimerEvent: {}
+[1.723297] (-) TimerEvent: {}
+[1.824336] (-) TimerEvent: {}
+[1.925463] (-) TimerEvent: {}
+[2.026249] (-) TimerEvent: {}
+[2.127114] (-) TimerEvent: {}
+[2.227899] (-) TimerEvent: {}
+[2.328661] (-) TimerEvent: {}
+[2.429504] (-) TimerEvent: {}
+[2.530728] (-) TimerEvent: {}
+[2.631514] (-) TimerEvent: {}
+[2.732275] (-) TimerEvent: {}
+[2.833067] (-) TimerEvent: {}
+[2.933813] (-) TimerEvent: {}
+[3.034687] (-) TimerEvent: {}
+[3.135863] (-) TimerEvent: {}
+[3.236580] (-) TimerEvent: {}
+[3.337421] (-) TimerEvent: {}
+[3.438166] (-) TimerEvent: {}
+[3.539170] (-) TimerEvent: {}
+[3.639986] (-) TimerEvent: {}
+[3.741044] (-) TimerEvent: {}
+[3.841823] (-) TimerEvent: {}
+[3.942605] (-) TimerEvent: {}
+[4.043631] (-) TimerEvent: {}
+[4.144378] (-) TimerEvent: {}
+[4.245135] (-) TimerEvent: {}
+[4.346039] (-) TimerEvent: {}
+[4.446784] (-) TimerEvent: {}
+[4.547696] (-) TimerEvent: {}
+[4.648968] (-) TimerEvent: {}
+[4.749770] (-) TimerEvent: {}
+[4.850496] (-) TimerEvent: {}
+[4.951806] (-) TimerEvent: {}
+[5.052692] (-) TimerEvent: {}
+[5.153819] (-) TimerEvent: {}
+[5.254758] (-) TimerEvent: {}
+[5.355730] (-) TimerEvent: {}
+[5.456490] (-) TimerEvent: {}
+[5.557353] (-) TimerEvent: {}
+[5.658082] (-) TimerEvent: {}
+[5.758807] (-) TimerEvent: {}
+[5.859607] (-) TimerEvent: {}
+[5.960315] (-) TimerEvent: {}
+[6.061323] (-) TimerEvent: {}
+[6.162554] (-) TimerEvent: {}
+[6.264593] (-) TimerEvent: {}
+[6.365455] (-) TimerEvent: {}
+[6.466723] (-) TimerEvent: {}
+[6.567592] (-) TimerEvent: {}
+[6.668377] (-) TimerEvent: {}
+[6.769214] (-) TimerEvent: {}
+[6.869973] (-) TimerEvent: {}
+[6.970751] (-) TimerEvent: {}
+[7.071663] (-) TimerEvent: {}
+[7.172404] (-) TimerEvent: {}
+[7.273164] (-) TimerEvent: {}
+[7.373965] (-) TimerEvent: {}
+[7.474717] (-) TimerEvent: {}
+[7.575698] (-) TimerEvent: {}
+[7.676851] (-) TimerEvent: {}
+[7.778250] (-) TimerEvent: {}
+[7.879204] (-) TimerEvent: {}
+[7.980491] (-) TimerEvent: {}
+[8.081781] (-) TimerEvent: {}
+[8.183132] (-) TimerEvent: {}
+[8.284107] (-) TimerEvent: {}
+[8.385075] (-) TimerEvent: {}
+[8.486100] (-) TimerEvent: {}
+[8.587010] (-) TimerEvent: {}
+[8.687896] (-) TimerEvent: {}
+[8.788756] (-) TimerEvent: {}
+[8.889631] (-) TimerEvent: {}
+[8.990569] (-) TimerEvent: {}
+[9.091525] (-) TimerEvent: {}
+[9.192338] (-) TimerEvent: {}
+[9.293197] (-) TimerEvent: {}
+[9.394568] (-) TimerEvent: {}
+[9.496126] (-) TimerEvent: {}
+[9.597100] (-) TimerEvent: {}
+[9.698195] (-) TimerEvent: {}
+[9.799072] (-) TimerEvent: {}
+[9.900057] (-) TimerEvent: {}
+[10.000976] (-) TimerEvent: {}
+[10.102008] (-) TimerEvent: {}
+[10.203740] (-) TimerEvent: {}
+[10.305254] (-) TimerEvent: {}
+[10.406758] (-) TimerEvent: {}
+[10.527230] (tail_control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/tail_control', 'build', '--build-base', '/home/ryan/treeclimber/build/tail_control/build', 'install', '--record', '/home/ryan/treeclimber/build/tail_control/install.log', '--single-version-externally-managed'], 'cwd': '/home/ryan/treeclimber/src/tail_control', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ryan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ryan', 'OLDPWD': '/home/ryan', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '969', 'SYSTEMD_EXEC_PID': '1519', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '8536', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ryan/treeclimber/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ryan', 'JOURNAL_STREAM': '8:27795', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ryan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/ryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ryan-desktop:@/tmp/.ICE-unix/1460,unix/ryan-desktop:/tmp/.ICE-unix/1460', 'INVOCATION_ID': '97b2563d1c3d4cba921273c60e206b01', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'openssh', 'SSH_AUTH_SOCK': '/run/user/1000/openssh_agent', 'AMENT_PREFIX_PATH': '/home/ryan/treeclimber/install/tail_control:/home/ryan/treeclimber/install/motor_tests:/home/ryan/treeclimber/install/drive_arms:/home/ryan/treeclimber/install/body_control:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:665dde54-9895-4aca-a1ec-07dcbc862295', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ryan/treeclimber/build/tail_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryan/treeclimber/build/tail_control/prefix_override:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[10.543913] (-) TimerEvent: {}
+[10.653401] (-) TimerEvent: {}
+[10.691845] (body_control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/body_control', 'build', '--build-base', '/home/ryan/treeclimber/build/body_control/build', 'install', '--record', '/home/ryan/treeclimber/build/body_control/install.log', '--single-version-externally-managed'], 'cwd': '/home/ryan/treeclimber/src/body_control', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ryan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ryan', 'OLDPWD': '/home/ryan', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '969', 'SYSTEMD_EXEC_PID': '1519', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '8536', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ryan/treeclimber/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ryan', 'JOURNAL_STREAM': '8:27795', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ryan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/ryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ryan-desktop:@/tmp/.ICE-unix/1460,unix/ryan-desktop:/tmp/.ICE-unix/1460', 'INVOCATION_ID': '97b2563d1c3d4cba921273c60e206b01', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'openssh', 'SSH_AUTH_SOCK': '/run/user/1000/openssh_agent', 'AMENT_PREFIX_PATH': '/home/ryan/treeclimber/install/tail_control:/home/ryan/treeclimber/install/motor_tests:/home/ryan/treeclimber/install/drive_arms:/home/ryan/treeclimber/install/body_control:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:665dde54-9895-4aca-a1ec-07dcbc862295', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ryan/treeclimber/build/body_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[10.749720] (motor_tests) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/motor_tests', 'build', '--build-base', '/home/ryan/treeclimber/build/motor_tests/build', 'install', '--record', '/home/ryan/treeclimber/build/motor_tests/install.log', '--single-version-externally-managed'], 'cwd': '/home/ryan/treeclimber/src/motor_tests', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ryan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ryan', 'OLDPWD': '/home/ryan', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '969', 'SYSTEMD_EXEC_PID': '1519', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '8536', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ryan/treeclimber/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ryan', 'JOURNAL_STREAM': '8:27795', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ryan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/ryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ryan-desktop:@/tmp/.ICE-unix/1460,unix/ryan-desktop:/tmp/.ICE-unix/1460', 'INVOCATION_ID': '97b2563d1c3d4cba921273c60e206b01', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'openssh', 'SSH_AUTH_SOCK': '/run/user/1000/openssh_agent', 'AMENT_PREFIX_PATH': '/home/ryan/treeclimber/install/tail_control:/home/ryan/treeclimber/install/motor_tests:/home/ryan/treeclimber/install/drive_arms:/home/ryan/treeclimber/install/body_control:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:665dde54-9895-4aca-a1ec-07dcbc862295', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ryan/treeclimber/build/motor_tests', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[10.772538] (-) TimerEvent: {}
+[10.782428] (drive_arms) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/drive_arms', 'build', '--build-base', '/home/ryan/treeclimber/build/drive_arms/build', 'install', '--record', '/home/ryan/treeclimber/build/drive_arms/install.log', '--single-version-externally-managed'], 'cwd': '/home/ryan/treeclimber/src/drive_arms', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ryan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ryan', 'OLDPWD': '/home/ryan', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '969', 'SYSTEMD_EXEC_PID': '1519', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '8536', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ryan/treeclimber/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ryan', 'JOURNAL_STREAM': '8:27795', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ryan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/ryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ryan-desktop:@/tmp/.ICE-unix/1460,unix/ryan-desktop:/tmp/.ICE-unix/1460', 'INVOCATION_ID': '97b2563d1c3d4cba921273c60e206b01', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'openssh', 'SSH_AUTH_SOCK': '/run/user/1000/openssh_agent', 'AMENT_PREFIX_PATH': '/home/ryan/treeclimber/install/tail_control:/home/ryan/treeclimber/install/motor_tests:/home/ryan/treeclimber/install/drive_arms:/home/ryan/treeclimber/install/body_control:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:665dde54-9895-4aca-a1ec-07dcbc862295', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ryan/treeclimber/build/drive_arms', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryan/treeclimber/build/drive_arms/prefix_override:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[10.872746] (-) TimerEvent: {}
+[10.974160] (-) TimerEvent: {}
+[11.076100] (-) TimerEvent: {}
+[11.178082] (-) TimerEvent: {}
+[11.279487] (-) TimerEvent: {}
+[11.381004] (-) TimerEvent: {}
+[11.483367] (-) TimerEvent: {}
+[11.585035] (-) TimerEvent: {}
+[11.686785] (-) TimerEvent: {}
+[11.795158] (-) TimerEvent: {}
+[11.896071] (-) TimerEvent: {}
+[11.997777] (-) TimerEvent: {}
+[12.099441] (-) TimerEvent: {}
+[12.201056] (-) TimerEvent: {}
+[12.302713] (-) TimerEvent: {}
+[12.404589] (-) TimerEvent: {}
+[12.506388] (-) TimerEvent: {}
+[12.608166] (-) TimerEvent: {}
+[12.683122] (tail_control) StdoutLine: {'line': b'running egg_info\n'}
+[12.688299] (tail_control) StdoutLine: {'line': b'writing ../../build/tail_control/tail_control.egg-info/PKG-INFO\n'}
+[12.693818] (tail_control) StdoutLine: {'line': b'writing dependency_links to ../../build/tail_control/tail_control.egg-info/dependency_links.txt\n'}
+[12.697699] (tail_control) StdoutLine: {'line': b'writing entry points to ../../build/tail_control/tail_control.egg-info/entry_points.txt\n'}
+[12.701190] (tail_control) StdoutLine: {'line': b'writing requirements to ../../build/tail_control/tail_control.egg-info/requires.txt\n'}
+[12.705341] (tail_control) StdoutLine: {'line': b'writing top-level names to ../../build/tail_control/tail_control.egg-info/top_level.txt\n'}
+[12.708295] (-) TimerEvent: {}
+[12.718190] (tail_control) StdoutLine: {'line': b"reading manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'\n"}
+[12.724961] (tail_control) StdoutLine: {'line': b"writing manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'\n"}
+[12.728249] (tail_control) StdoutLine: {'line': b'running build\n'}
+[12.731071] (tail_control) StdoutLine: {'line': b'running build_py\n'}
+[12.734681] (tail_control) StdoutLine: {'line': b'running install\n'}
+[12.744080] (tail_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[12.745976] (tail_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[12.747925] (tail_control) StdoutLine: {'line': b'running install_lib\n'}
+[12.757917] (tail_control) StdoutLine: {'line': b'running install_data\n'}
+[12.768756] (tail_control) StdoutLine: {'line': b'creating /home/ryan/treeclimber/install/tail_control/share/tail_control/launch\n'}
+[12.773374] (tail_control) StdoutLine: {'line': b'copying launch/killswitch_launch.py -> /home/ryan/treeclimber/install/tail_control/share/tail_control/launch\n'}
+[12.776136] (tail_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[12.786148] (tail_control) StdoutLine: {'line': b"removing '/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[12.792261] (tail_control) StdoutLine: {'line': b'Copying ../../build/tail_control/tail_control.egg-info to /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control-0.0.0-py3.10.egg-info\n'}
+[12.801848] (tail_control) StdoutLine: {'line': b'running install_scripts\n'}
+[12.808594] (-) TimerEvent: {}
+[12.823029] (body_control) StdoutLine: {'line': b'running egg_info\n'}
+[12.827768] (body_control) StdoutLine: {'line': b'writing ../../build/body_control/body_control.egg-info/PKG-INFO\n'}
+[12.831255] (body_control) StdoutLine: {'line': b'writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt\n'}
+[12.835747] (body_control) StdoutLine: {'line': b'writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt\n'}
+[12.839878] (body_control) StdoutLine: {'line': b'writing requirements to ../../build/body_control/body_control.egg-info/requires.txt\n'}
+[12.844580] (body_control) StdoutLine: {'line': b'writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt\n'}
+[12.848698] (drive_arms) StdoutLine: {'line': b'running egg_info\n'}
+[12.862927] (drive_arms) StdoutLine: {'line': b'writing ../../build/drive_arms/drive_arms.egg-info/PKG-INFO\n'}
+[12.869290] (drive_arms) StdoutLine: {'line': b'writing dependency_links to ../../build/drive_arms/drive_arms.egg-info/dependency_links.txt\n'}
+[12.877532] (drive_arms) StdoutLine: {'line': b'writing entry points to ../../build/drive_arms/drive_arms.egg-info/entry_points.txt\n'}
+[12.881614] (body_control) StdoutLine: {'line': b"reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'\n"}
+[12.885468] (drive_arms) StdoutLine: {'line': b'writing requirements to ../../build/drive_arms/drive_arms.egg-info/requires.txt\n'}
+[12.888316] (drive_arms) StdoutLine: {'line': b'writing top-level names to ../../build/drive_arms/drive_arms.egg-info/top_level.txt\n'}
+[12.891468] (body_control) StdoutLine: {'line': b"writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'\n"}
+[12.894030] (drive_arms) StdoutLine: {'line': b"reading manifest file '../../build/drive_arms/drive_arms.egg-info/SOURCES.txt'\n"}
+[12.896531] (drive_arms) StdoutLine: {'line': b"writing manifest file '../../build/drive_arms/drive_arms.egg-info/SOURCES.txt'\n"}
+[12.903264] (body_control) StdoutLine: {'line': b'running build\n'}
+[12.905970] (body_control) StdoutLine: {'line': b'running build_py\n'}
+[12.908903] (-) TimerEvent: {}
+[12.909929] (body_control) StdoutLine: {'line': b'running install\n'}
+[12.919484] (body_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[12.919984] (drive_arms) StdoutLine: {'line': b'running build\n'}
+[12.920379] (drive_arms) StdoutLine: {'line': b'running build_py\n'}
+[12.920851] (body_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[12.921279] (body_control) StdoutLine: {'line': b'running install_lib\n'}
+[12.921677] (drive_arms) StdoutLine: {'line': b'running install\n'}
+[12.922025] (drive_arms) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[12.922460] (drive_arms) StderrLine: {'line': b'  warnings.warn(\n'}
+[12.922809] (drive_arms) StdoutLine: {'line': b'running install_lib\n'}
+[12.923283] (body_control) StdoutLine: {'line': b'running install_data\n'}
+[12.923677] (body_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[12.924022] (body_control) StdoutLine: {'line': b"removing '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[12.924359] (body_control) StdoutLine: {'line': b'Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info\n'}
+[12.931318] (drive_arms) StdoutLine: {'line': b'running install_data\n'}
+[12.932105] (body_control) StdoutLine: {'line': b'running install_scripts\n'}
+[12.934423] (drive_arms) StdoutLine: {'line': b'running install_egg_info\n'}
+[12.958837] (drive_arms) StdoutLine: {'line': b"removing '/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages/drive_arms-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[12.970817] (drive_arms) StdoutLine: {'line': b'Copying ../../build/drive_arms/drive_arms.egg-info to /home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages/drive_arms-0.0.0-py3.10.egg-info\n'}
+[12.992882] (tail_control) StdoutLine: {'line': b'Installing killswitch_relay script to /home/ryan/treeclimber/install/tail_control/lib/tail_control\n'}
+[12.995738] (tail_control) StdoutLine: {'line': b"writing list of installed files to '/home/ryan/treeclimber/build/tail_control/install.log'\n"}
+[13.009178] (-) TimerEvent: {}
+[13.035176] (drive_arms) StdoutLine: {'line': b'running install_scripts\n'}
+[13.058631] (motor_tests) StdoutLine: {'line': b'running egg_info\n'}
+[13.062109] (motor_tests) StdoutLine: {'line': b'writing ../../build/motor_tests/motor_tests.egg-info/PKG-INFO\n'}
+[13.067834] (motor_tests) StdoutLine: {'line': b'writing dependency_links to ../../build/motor_tests/motor_tests.egg-info/dependency_links.txt\n'}
+[13.075117] (motor_tests) StdoutLine: {'line': b'writing entry points to ../../build/motor_tests/motor_tests.egg-info/entry_points.txt\n'}
+[13.077214] (motor_tests) StdoutLine: {'line': b'writing requirements to ../../build/motor_tests/motor_tests.egg-info/requires.txt\n'}
+[13.078562] (motor_tests) StdoutLine: {'line': b'writing top-level names to ../../build/motor_tests/motor_tests.egg-info/top_level.txt\n'}
+[13.093398] (motor_tests) StdoutLine: {'line': b"reading manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'\n"}
+[13.101989] (motor_tests) StdoutLine: {'line': b"writing manifest file '../../build/motor_tests/motor_tests.egg-info/SOURCES.txt'\n"}
+[13.103630] (motor_tests) StdoutLine: {'line': b'running build\n'}
+[13.104072] (motor_tests) StdoutLine: {'line': b'running build_py\n'}
+[13.105985] (motor_tests) StdoutLine: {'line': b'running install\n'}
+[13.108435] (motor_tests) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[13.109294] (-) TimerEvent: {}
+[13.109861] (motor_tests) StderrLine: {'line': b'  warnings.warn(\n'}
+[13.110427] (motor_tests) StdoutLine: {'line': b'running install_lib\n'}
+[13.114508] (motor_tests) StdoutLine: {'line': b'running install_data\n'}
+[13.117904] (motor_tests) StdoutLine: {'line': b'running install_egg_info\n'}
+[13.131358] (motor_tests) StdoutLine: {'line': b"removing '/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[13.139880] (motor_tests) StdoutLine: {'line': b'Copying ../../build/motor_tests/motor_tests.egg-info to /home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages/motor_tests-0.0.0-py3.10.egg-info\n'}
+[13.157458] (motor_tests) StdoutLine: {'line': b'running install_scripts\n'}
+[13.177164] (body_control) StdoutLine: {'line': b"writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'\n"}
+[13.209664] (-) TimerEvent: {}
+[13.234183] (tail_control) CommandEnded: {'returncode': 0}
+[13.311239] (-) TimerEvent: {}
+[13.358646] (motor_tests) StdoutLine: {'line': b'Installing grasp_motor_test script to /home/ryan/treeclimber/install/motor_tests/lib/motor_tests\n'}
+[13.401132] (drive_arms) StdoutLine: {'line': b'Installing spi_test script to /home/ryan/treeclimber/install/drive_arms/lib/drive_arms\n'}
+[13.407590] (drive_arms) StdoutLine: {'line': b"writing list of installed files to '/home/ryan/treeclimber/build/drive_arms/install.log'\n"}
+[13.410318] (motor_tests) StdoutLine: {'line': b"writing list of installed files to '/home/ryan/treeclimber/build/motor_tests/install.log'\n"}
+[13.444443] (-) TimerEvent: {}
+[13.553165] (-) TimerEvent: {}
+[13.657174] (-) TimerEvent: {}
+[13.758889] (-) TimerEvent: {}
+[13.860354] (-) TimerEvent: {}
+[13.909737] (tail_control) JobEnded: {'identifier': 'tail_control', 'rc': 0}
+[13.918319] (body_control) CommandEnded: {'returncode': 0}
+[13.960665] (-) TimerEvent: {}
+[14.061389] (-) TimerEvent: {}
+[14.162637] (-) TimerEvent: {}
+[14.187789] (body_control) JobEnded: {'identifier': 'body_control', 'rc': 0}
+[14.190504] (motor_tests) CommandEnded: {'returncode': 0}
+[14.264291] (-) TimerEvent: {}
+[14.365457] (-) TimerEvent: {}
+[14.466794] (-) TimerEvent: {}
+[14.474428] (motor_tests) JobEnded: {'identifier': 'motor_tests', 'rc': 0}
+[14.477077] (drive_arms) CommandEnded: {'returncode': 0}
+[14.567006] (-) TimerEvent: {}
+[14.667656] (-) TimerEvent: {}
+[14.769402] (-) TimerEvent: {}
+[14.798667] (drive_arms) JobEnded: {'identifier': 'drive_arms', 'rc': 0}
+[14.803756] (-) EventReactorShutdown: {}

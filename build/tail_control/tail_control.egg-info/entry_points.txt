@@ -1,0 +1,3 @@
+[console_scripts]
+killswitch_relay = tail_control.killswitch_relay:main
+

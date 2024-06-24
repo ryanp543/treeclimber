@@ -1,0 +1,25 @@
+[9.109s] Invoking command in '/home/ryan/treeclimber/src/tail_control': PYTHONPATH=/home/ryan/treeclimber/build/tail_control/prefix_override:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tail_control build --build-base /home/ryan/treeclimber/build/tail_control/build install --record /home/ryan/treeclimber/build/tail_control/install.log --single-version-externally-managed
+[11.257s] running egg_info
+[11.260s] writing ../../build/tail_control/tail_control.egg-info/PKG-INFO
+[11.267s] writing dependency_links to ../../build/tail_control/tail_control.egg-info/dependency_links.txt
+[11.271s] writing entry points to ../../build/tail_control/tail_control.egg-info/entry_points.txt
+[11.275s] writing requirements to ../../build/tail_control/tail_control.egg-info/requires.txt
+[11.278s] writing top-level names to ../../build/tail_control/tail_control.egg-info/top_level.txt
+[11.291s] reading manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'
+[11.298s] writing manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'
+[11.301s] running build
+[11.304s] running build_py
+[11.311s] running install
+[11.317s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[11.317s]   warnings.warn(
+[11.319s] running install_lib
+[11.333s] running install_data
+[11.343s] creating /home/ryan/treeclimber/install/tail_control/share/tail_control/launch
+[11.346s] copying launch/killswitch_launch.py -> /home/ryan/treeclimber/install/tail_control/share/tail_control/launch
+[11.349s] running install_egg_info
+[11.362s] removing '/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control-0.0.0-py3.10.egg-info' (and everything under it)
+[11.364s] Copying ../../build/tail_control/tail_control.egg-info to /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control-0.0.0-py3.10.egg-info
+[11.373s] running install_scripts
+[11.564s] Installing killswitch_relay script to /home/ryan/treeclimber/install/tail_control/lib/tail_control
+[11.567s] writing list of installed files to '/home/ryan/treeclimber/build/tail_control/install.log'
+[11.807s] Invoked command in '/home/ryan/treeclimber/src/tail_control' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/tail_control/prefix_override:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tail_control build --build-base /home/ryan/treeclimber/build/tail_control/build install --record /home/ryan/treeclimber/build/tail_control/install.log --single-version-externally-managed

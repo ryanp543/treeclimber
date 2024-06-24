@@ -1,0 +1,37 @@
+running egg_info
+creating ../../build/tail_control/tail_control.egg-info
+writing ../../build/tail_control/tail_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/tail_control/tail_control.egg-info/dependency_links.txt
+writing entry points to ../../build/tail_control/tail_control.egg-info/entry_points.txt
+writing requirements to ../../build/tail_control/tail_control.egg-info/requires.txt
+writing top-level names to ../../build/tail_control/tail_control.egg-info/top_level.txt
+writing manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'
+reading manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/tail_control/tail_control.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/ryan/treeclimber/build/tail_control/build
+creating /home/ryan/treeclimber/build/tail_control/build/lib
+creating /home/ryan/treeclimber/build/tail_control/build/lib/tail_control
+copying tail_control/__init__.py -> /home/ryan/treeclimber/build/tail_control/build/lib/tail_control
+copying tail_control/killswitch_relay.py -> /home/ryan/treeclimber/build/tail_control/build/lib/tail_control
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+creating /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control
+copying /home/ryan/treeclimber/build/tail_control/build/lib/tail_control/__init__.py -> /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control
+copying /home/ryan/treeclimber/build/tail_control/build/lib/tail_control/killswitch_relay.py -> /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control
+byte-compiling /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control/killswitch_relay.py to killswitch_relay.cpython-310.pyc
+running install_data
+creating /home/ryan/treeclimber/install/tail_control/share/ament_index
+creating /home/ryan/treeclimber/install/tail_control/share/ament_index/resource_index
+creating /home/ryan/treeclimber/install/tail_control/share/ament_index/resource_index/packages
+copying resource/tail_control -> /home/ryan/treeclimber/install/tail_control/share/ament_index/resource_index/packages
+copying package.xml -> /home/ryan/treeclimber/install/tail_control/share/tail_control
+running install_egg_info
+Copying ../../build/tail_control/tail_control.egg-info to /home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages/tail_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing talker script to /home/ryan/treeclimber/install/tail_control/lib/tail_control
+writing list of installed files to '/home/ryan/treeclimber/build/tail_control/install.log'

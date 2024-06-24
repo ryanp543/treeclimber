@@ -1,0 +1,23 @@
+[10.228s] Invoking command in '/home/ryan/treeclimber/src/drive_arms': PYTHONPATH=/home/ryan/treeclimber/build/drive_arms/prefix_override:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/drive_arms build --build-base /home/ryan/treeclimber/build/drive_arms/build install --record /home/ryan/treeclimber/build/drive_arms/install.log --single-version-externally-managed
+[12.247s] running egg_info
+[12.250s] writing ../../build/drive_arms/drive_arms.egg-info/PKG-INFO
+[12.254s] writing dependency_links to ../../build/drive_arms/drive_arms.egg-info/dependency_links.txt
+[12.263s] writing entry points to ../../build/drive_arms/drive_arms.egg-info/entry_points.txt
+[12.272s] writing requirements to ../../build/drive_arms/drive_arms.egg-info/requires.txt
+[12.275s] writing top-level names to ../../build/drive_arms/drive_arms.egg-info/top_level.txt
+[12.295s] reading manifest file '../../build/drive_arms/drive_arms.egg-info/SOURCES.txt'
+[12.302s] writing manifest file '../../build/drive_arms/drive_arms.egg-info/SOURCES.txt'
+[12.304s] running build
+[12.307s] running build_py
+[12.311s] running install
+[12.314s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[12.316s]   warnings.warn(
+[12.319s] running install_lib
+[12.326s] running install_data
+[12.331s] running install_egg_info
+[12.351s] removing '/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages/drive_arms-0.0.0-py3.10.egg-info' (and everything under it)
+[12.366s] Copying ../../build/drive_arms/drive_arms.egg-info to /home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages/drive_arms-0.0.0-py3.10.egg-info
+[12.410s] running install_scripts
+[12.588s] Installing spi_test script to /home/ryan/treeclimber/install/drive_arms/lib/drive_arms
+[12.598s] writing list of installed files to '/home/ryan/treeclimber/build/drive_arms/install.log'
+[12.874s] Invoked command in '/home/ryan/treeclimber/src/drive_arms' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/drive_arms/prefix_override:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/drive_arms build --build-base /home/ryan/treeclimber/build/drive_arms/build install --record /home/ryan/treeclimber/build/drive_arms/install.log --single-version-externally-managed

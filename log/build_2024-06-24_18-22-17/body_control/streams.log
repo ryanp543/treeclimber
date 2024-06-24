@@ -1,0 +1,22 @@
+[11.147s] Invoking command in '/home/ryan/treeclimber/src/body_control': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed
+[13.344s] running egg_info
+[13.347s] writing ../../build/body_control/body_control.egg-info/PKG-INFO
+[13.348s] writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt
+[13.352s] writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt
+[13.353s] writing requirements to ../../build/body_control/body_control.egg-info/requires.txt
+[13.356s] writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt
+[13.407s] reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+[13.420s] writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+[13.421s] running build
+[13.422s] running build_py
+[13.423s] running install
+[13.424s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[13.425s]   warnings.warn(
+[13.425s] running install_lib
+[13.426s] running install_data
+[13.427s] running install_egg_info
+[13.433s] removing '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info' (and everything under it)
+[13.433s] Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info
+[13.434s] running install_scripts
+[13.567s] writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'
+[14.503s] Invoked command in '/home/ryan/treeclimber/src/body_control' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed

@@ -1,0 +1,277 @@
+[3.972s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[3.973s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0xffff9e781a50>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0xffff9ea831c0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0xffff9ea831c0>>)
+[4.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[4.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[4.161s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[4.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[4.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[4.162s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[4.162s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ryan/treeclimber'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[4.163s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[4.164s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[4.165s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[4.165s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[4.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[4.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[4.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[4.205s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[4.206s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[4.206s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[4.207s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[4.207s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[4.207s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[4.208s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[4.208s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[4.209s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[4.209s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[4.209s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[4.210s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[4.210s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[4.210s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[4.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[4.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[4.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[4.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[4.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[4.211s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[4.212s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[4.212s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[4.212s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[4.213s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[4.213s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[4.213s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extensions ['ignore', 'ignore_ament_install']
+[4.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extension 'ignore'
+[4.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extension 'ignore_ament_install'
+[4.214s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extensions ['colcon_pkg']
+[4.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extension 'colcon_pkg'
+[4.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extensions ['colcon_meta']
+[4.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extension 'colcon_meta'
+[4.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extensions ['ros']
+[4.215s] Level 1:colcon.colcon_core.package_identification:_identify(src/body_control) by extension 'ros'
+[4.226s] DEBUG:colcon.colcon_core.package_identification:Package 'src/body_control' with type 'ros.ament_python' and name 'body_control'
+[4.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extensions ['ignore', 'ignore_ament_install']
+[4.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extension 'ignore'
+[4.227s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extension 'ignore_ament_install'
+[4.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extensions ['colcon_pkg']
+[4.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extension 'colcon_pkg'
+[4.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extensions ['colcon_meta']
+[4.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extension 'colcon_meta'
+[4.228s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extensions ['ros']
+[4.229s] Level 1:colcon.colcon_core.package_identification:_identify(src/drive_arms) by extension 'ros'
+[4.230s] DEBUG:colcon.colcon_core.package_identification:Package 'src/drive_arms' with type 'ros.ament_python' and name 'drive_arms'
+[4.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extensions ['ignore', 'ignore_ament_install']
+[4.231s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extension 'ignore'
+[4.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extension 'ignore_ament_install'
+[4.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extensions ['colcon_pkg']
+[4.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extension 'colcon_pkg'
+[4.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extensions ['colcon_meta']
+[4.232s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extension 'colcon_meta'
+[4.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extensions ['ros']
+[4.233s] Level 1:colcon.colcon_core.package_identification:_identify(src/motor_tests) by extension 'ros'
+[4.235s] DEBUG:colcon.colcon_core.package_identification:Package 'src/motor_tests' with type 'ros.ament_python' and name 'motor_tests'
+[4.235s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extensions ['ignore', 'ignore_ament_install']
+[4.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extension 'ignore'
+[4.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extension 'ignore_ament_install'
+[4.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extensions ['colcon_pkg']
+[4.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extension 'colcon_pkg'
+[4.236s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extensions ['colcon_meta']
+[4.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extension 'colcon_meta'
+[4.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extensions ['ros']
+[4.237s] Level 1:colcon.colcon_core.package_identification:_identify(src/tail_control) by extension 'ros'
+[4.239s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tail_control' with type 'ros.ament_python' and name 'tail_control'
+[4.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[4.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[4.239s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[4.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[4.240s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[4.600s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[4.600s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[4.718s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/ryan/treeclimber/install
+[4.785s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 270 installed packages in /opt/ros/humble
+[4.790s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[5.146s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'cmake_args' from command line to 'None'
+[5.146s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'cmake_target' from command line to 'None'
+[5.147s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.148s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'cmake_clean_cache' from command line to 'False'
+[5.148s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'cmake_clean_first' from command line to 'False'
+[5.149s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'cmake_force_configure' from command line to 'False'
+[5.149s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'ament_cmake_args' from command line to 'None'
+[5.149s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'catkin_cmake_args' from command line to 'None'
+[5.150s] Level 5:colcon.colcon_core.verb:set package 'body_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.150s] DEBUG:colcon.colcon_core.verb:Building package 'body_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/treeclimber/build/body_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/treeclimber/install/body_control', 'merge_install': False, 'path': '/home/ryan/treeclimber/src/body_control', 'symlink_install': False, 'test_result_base': None}
+[5.210s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'cmake_args' from command line to 'None'
+[5.210s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'cmake_target' from command line to 'None'
+[5.210s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.210s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'cmake_clean_cache' from command line to 'False'
+[5.211s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'cmake_clean_first' from command line to 'False'
+[5.211s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'cmake_force_configure' from command line to 'False'
+[5.211s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'ament_cmake_args' from command line to 'None'
+[5.211s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'catkin_cmake_args' from command line to 'None'
+[5.211s] Level 5:colcon.colcon_core.verb:set package 'drive_arms' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.211s] DEBUG:colcon.colcon_core.verb:Building package 'drive_arms' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/treeclimber/build/drive_arms', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/treeclimber/install/drive_arms', 'merge_install': False, 'path': '/home/ryan/treeclimber/src/drive_arms', 'symlink_install': False, 'test_result_base': None}
+[5.268s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'cmake_args' from command line to 'None'
+[5.268s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'cmake_target' from command line to 'None'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'cmake_clean_cache' from command line to 'False'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'cmake_clean_first' from command line to 'False'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'cmake_force_configure' from command line to 'False'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'ament_cmake_args' from command line to 'None'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'catkin_cmake_args' from command line to 'None'
+[5.269s] Level 5:colcon.colcon_core.verb:set package 'motor_tests' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.269s] DEBUG:colcon.colcon_core.verb:Building package 'motor_tests' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/treeclimber/build/motor_tests', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/treeclimber/install/motor_tests', 'merge_install': False, 'path': '/home/ryan/treeclimber/src/motor_tests', 'symlink_install': False, 'test_result_base': None}
+[5.329s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'cmake_args' from command line to 'None'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'cmake_target' from command line to 'None'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'cmake_clean_cache' from command line to 'False'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'cmake_clean_first' from command line to 'False'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'cmake_force_configure' from command line to 'False'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'ament_cmake_args' from command line to 'None'
+[5.330s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'catkin_cmake_args' from command line to 'None'
+[5.331s] Level 5:colcon.colcon_core.verb:set package 'tail_control' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.331s] DEBUG:colcon.colcon_core.verb:Building package 'tail_control' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ryan/treeclimber/build/tail_control', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ryan/treeclimber/install/tail_control', 'merge_install': False, 'path': '/home/ryan/treeclimber/src/tail_control', 'symlink_install': False, 'test_result_base': None}
+[5.386s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[5.449s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[5.450s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryan/treeclimber/src/body_control' with build type 'ament_python'
+[5.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('body_control', 'ament_prefix_path')
+[5.548s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[5.549s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/body_control/share/body_control/hook/ament_prefix_path.ps1'
+[5.551s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/body_control/share/body_control/hook/ament_prefix_path.dsv'
+[5.553s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/body_control/share/body_control/hook/ament_prefix_path.sh'
+[5.645s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.645s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[5.866s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryan/treeclimber/src/drive_arms' with build type 'ament_python'
+[5.867s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_arms', 'ament_prefix_path')
+[5.939s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/hook/ament_prefix_path.ps1'
+[5.941s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/hook/ament_prefix_path.dsv'
+[5.943s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/hook/ament_prefix_path.sh'
+[6.046s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.047s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.259s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryan/treeclimber/src/motor_tests' with build type 'ament_python'
+[6.260s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_tests', 'ament_prefix_path')
+[6.348s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/hook/ament_prefix_path.ps1'
+[6.352s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/hook/ament_prefix_path.dsv'
+[6.356s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/hook/ament_prefix_path.sh'
+[6.461s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.461s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[6.669s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ryan/treeclimber/src/tail_control' with build type 'ament_python'
+[6.670s] Level 1:colcon.colcon_core.shell:create_environment_hook('tail_control', 'ament_prefix_path')
+[6.752s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/tail_control/share/tail_control/hook/ament_prefix_path.ps1'
+[6.754s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/tail_control/share/tail_control/hook/ament_prefix_path.dsv'
+[6.756s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/tail_control/share/tail_control/hook/ament_prefix_path.sh'
+[6.847s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[6.847s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[8.429s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryan/treeclimber/src/body_control'
+[8.505s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[8.506s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[9.942s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryan/treeclimber/src/drive_arms'
+[10.023s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.024s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[11.457s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryan/treeclimber/src/motor_tests'
+[11.529s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[11.530s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[12.994s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ryan/treeclimber/src/tail_control'
+[13.067s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[13.067s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[16.099s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/treeclimber/src/drive_arms': PYTHONPATH=/home/ryan/treeclimber/build/drive_arms/prefix_override:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/drive_arms build --build-base /home/ryan/treeclimber/build/drive_arms/build install --record /home/ryan/treeclimber/build/drive_arms/install.log --single-version-externally-managed
+[16.252s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/treeclimber/src/tail_control': PYTHONPATH=/home/ryan/treeclimber/build/tail_control/prefix_override:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tail_control build --build-base /home/ryan/treeclimber/build/tail_control/build install --record /home/ryan/treeclimber/build/tail_control/install.log --single-version-externally-managed
+[16.397s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/treeclimber/src/motor_tests': PYTHONPATH=/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_tests build --build-base /home/ryan/treeclimber/build/motor_tests/build install --record /home/ryan/treeclimber/build/motor_tests/install.log --single-version-externally-managed
+[16.599s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ryan/treeclimber/src/body_control': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed
+[18.742s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/treeclimber/src/drive_arms' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/drive_arms/prefix_override:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/drive_arms build --build-base /home/ryan/treeclimber/build/drive_arms/build install --record /home/ryan/treeclimber/build/drive_arms/install.log --single-version-externally-managed
+[19.105s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms' for CMake module files
+[19.109s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms' for CMake config files
+[19.128s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms/lib'
+[19.132s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms/bin'
+[19.133s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms/lib/pkgconfig/drive_arms.pc'
+[19.135s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages'
+[19.136s] Level 1:colcon.colcon_core.shell:create_environment_hook('drive_arms', 'pythonpath')
+[19.306s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/hook/pythonpath.ps1'
+[19.308s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/hook/pythonpath.dsv'
+[19.310s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/hook/pythonpath.sh'
+[19.312s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/drive_arms/bin'
+[19.313s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(drive_arms)
+[19.376s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/package.ps1'
+[19.382s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/package.dsv'
+[19.388s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/package.sh'
+[19.394s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/package.bash'
+[19.397s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/drive_arms/share/drive_arms/package.zsh'
+[19.401s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/treeclimber/install/drive_arms/share/colcon-core/packages/drive_arms)
+[19.410s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/treeclimber/src/tail_control' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/tail_control/prefix_override:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/tail_control build --build-base /home/ryan/treeclimber/build/tail_control/build install --record /home/ryan/treeclimber/build/tail_control/install.log --single-version-externally-managed
+[19.507s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control' for CMake module files
+[19.510s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control' for CMake config files
+[19.515s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control/lib'
+[19.516s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control/bin'
+[19.517s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control/lib/pkgconfig/tail_control.pc'
+[19.518s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages'
+[19.519s] Level 1:colcon.colcon_core.shell:create_environment_hook('tail_control', 'pythonpath')
+[19.608s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/tail_control/share/tail_control/hook/pythonpath.ps1'
+[19.610s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/tail_control/share/tail_control/hook/pythonpath.dsv'
+[19.611s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/tail_control/share/tail_control/hook/pythonpath.sh'
+[19.614s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/tail_control/bin'
+[19.614s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tail_control)
+[19.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/tail_control/share/tail_control/package.ps1'
+[19.683s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/treeclimber/install/tail_control/share/tail_control/package.dsv'
+[19.687s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/tail_control/share/tail_control/package.sh'
+[19.691s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/tail_control/share/tail_control/package.bash'
+[19.694s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/tail_control/share/tail_control/package.zsh'
+[19.696s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/treeclimber/install/tail_control/share/colcon-core/packages/tail_control)
+[19.702s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/treeclimber/src/motor_tests' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/motor_tests/prefix_override:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/motor_tests build --build-base /home/ryan/treeclimber/build/motor_tests/build install --record /home/ryan/treeclimber/build/motor_tests/install.log --single-version-externally-managed
+[19.792s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests' for CMake module files
+[19.795s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests' for CMake config files
+[19.798s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests/lib'
+[19.798s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests/bin'
+[19.799s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests/lib/pkgconfig/motor_tests.pc'
+[19.799s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages'
+[19.800s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_tests', 'pythonpath')
+[19.862s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/hook/pythonpath.ps1'
+[19.864s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/hook/pythonpath.dsv'
+[19.867s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/hook/pythonpath.sh'
+[19.870s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/motor_tests/bin'
+[19.871s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_tests)
+[19.939s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/package.ps1'
+[19.941s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/package.dsv'
+[19.944s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/package.sh'
+[19.946s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/package.bash'
+[19.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/motor_tests/share/motor_tests/package.zsh'
+[19.950s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/treeclimber/install/motor_tests/share/colcon-core/packages/motor_tests)
+[19.956s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ryan/treeclimber/src/body_control' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed
+[20.025s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control' for CMake module files
+[20.027s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control' for CMake config files
+[20.030s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control/lib'
+[20.031s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control/bin'
+[20.031s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control/lib/pkgconfig/body_control.pc'
+[20.032s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages'
+[20.032s] Level 1:colcon.colcon_core.shell:create_environment_hook('body_control', 'pythonpath')
+[20.136s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/body_control/share/body_control/hook/pythonpath.ps1'
+[20.138s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ryan/treeclimber/install/body_control/share/body_control/hook/pythonpath.dsv'
+[20.140s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ryan/treeclimber/install/body_control/share/body_control/hook/pythonpath.sh'
+[20.143s] Level 1:colcon.colcon_core.environment:checking '/home/ryan/treeclimber/install/body_control/bin'
+[20.144s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(body_control)
+[20.215s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/body_control/share/body_control/package.ps1'
+[20.217s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ryan/treeclimber/install/body_control/share/body_control/package.dsv'
+[20.219s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/body_control/share/body_control/package.sh'
+[20.221s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/body_control/share/body_control/package.bash'
+[20.223s] INFO:colcon.colcon_core.shell:Creating package script '/home/ryan/treeclimber/install/body_control/share/body_control/package.zsh'
+[20.225s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ryan/treeclimber/install/body_control/share/colcon-core/packages/body_control)
+[20.226s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[20.227s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[20.227s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[20.228s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[20.348s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[20.348s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[20.349s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[20.417s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[20.554s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/treeclimber/install/local_setup.ps1'
+[20.559s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryan/treeclimber/install/_local_setup_util_ps1.py'
+[20.565s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/treeclimber/install/setup.ps1'
+[20.663s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/treeclimber/install/local_setup.sh'
+[20.666s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ryan/treeclimber/install/_local_setup_util_sh.py'
+[20.668s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/treeclimber/install/setup.sh'
+[20.734s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/treeclimber/install/local_setup.bash'
+[20.736s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/treeclimber/install/setup.bash'
+[20.826s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ryan/treeclimber/install/local_setup.zsh'
+[20.832s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ryan/treeclimber/install/setup.zsh'
