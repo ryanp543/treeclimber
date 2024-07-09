@@ -332,4 +332,6 @@ if __name__ == "__main__":
     os.system('sudo ifconfig can0 down')
 
     # Plot data
-    # plot_data()
+
+
+    
