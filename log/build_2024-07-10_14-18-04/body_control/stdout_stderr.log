@@ -1,0 +1,34 @@
+running egg_info
+writing ../../build/body_control/body_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt
+writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt
+writing requirements to ../../build/body_control/body_control.egg-info/requires.txt
+writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt
+reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying body_control/body_controller.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+copying body_control/arms_tighten.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+copying body_control/arms_loosen.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+copying body_control/pcb_test_full.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+running install
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running install_lib
+copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/body_controller.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_tighten.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_loosen.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/pcb_test_full.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/body_controller.py to body_controller.cpython-310.pyc
+byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_tighten.py to arms_tighten.cpython-310.pyc
+byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_loosen.py to arms_loosen.cpython-310.pyc
+byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/pcb_test_full.py to pcb_test_full.cpython-310.pyc
+running install_data
+creating /home/ryan/treeclimber/install/body_control/share/body_control/launch
+running install_egg_info
+removing '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing arms_tighten script to /home/ryan/treeclimber/install/body_control/lib/body_control
+writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'

@@ -1,0 +1,26 @@
+[6.536s] Invoking command in '/home/ryan/treeclimber/src/body_control': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed
+[8.488s] running egg_info
+[8.496s] writing ../../build/body_control/body_control.egg-info/PKG-INFO
+[8.498s] writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt
+[8.498s] writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt
+[8.499s] writing requirements to ../../build/body_control/body_control.egg-info/requires.txt
+[8.499s] writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt
+[8.509s] reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+[8.512s] writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+[8.513s] running build
+[8.514s] running build_py
+[8.515s] copying body_control/arms_tighten.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+[8.520s] running install
+[8.523s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[8.524s]   warnings.warn(
+[8.525s] running install_lib
+[8.528s] copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_tighten.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+[8.532s] byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_tighten.py to arms_tighten.cpython-310.pyc
+[8.537s] running install_data
+[8.540s] running install_egg_info
+[8.548s] removing '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info' (and everything under it)
+[8.550s] Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info
+[8.570s] running install_scripts
+[8.715s] Installing arms_tighten script to /home/ryan/treeclimber/install/body_control/lib/body_control
+[8.721s] writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'
+[9.024s] Invoked command in '/home/ryan/treeclimber/src/body_control' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed

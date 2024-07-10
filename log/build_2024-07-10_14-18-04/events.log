@@ -1,0 +1,131 @@
+[0.000000] (-) TimerEvent: {}
+[0.002164] (-) JobUnselected: {'identifier': 'drive_arms'}
+[0.003569] (-) JobUnselected: {'identifier': 'motor_tests'}
+[0.003859] (-) JobUnselected: {'identifier': 'tail_control'}
+[0.004026] (body_control) JobQueued: {'identifier': 'body_control', 'dependencies': OrderedDict()}
+[0.004290] (body_control) JobStarted: {'identifier': 'body_control'}
+[0.099313] (-) TimerEvent: {}
+[0.202222] (-) TimerEvent: {}
+[0.304995] (-) TimerEvent: {}
+[0.406061] (-) TimerEvent: {}
+[0.507394] (-) TimerEvent: {}
+[0.608749] (-) TimerEvent: {}
+[0.710009] (-) TimerEvent: {}
+[0.811932] (-) TimerEvent: {}
+[0.912913] (-) TimerEvent: {}
+[1.014239] (-) TimerEvent: {}
+[1.115389] (-) TimerEvent: {}
+[1.219009] (-) TimerEvent: {}
+[1.321020] (-) TimerEvent: {}
+[1.422035] (-) TimerEvent: {}
+[1.523136] (-) TimerEvent: {}
+[1.624320] (-) TimerEvent: {}
+[1.726008] (-) TimerEvent: {}
+[1.829828] (-) TimerEvent: {}
+[1.930664] (-) TimerEvent: {}
+[2.031835] (-) TimerEvent: {}
+[2.132623] (-) TimerEvent: {}
+[2.233578] (-) TimerEvent: {}
+[2.335192] (-) TimerEvent: {}
+[2.437568] (-) TimerEvent: {}
+[2.542018] (-) TimerEvent: {}
+[2.642844] (-) TimerEvent: {}
+[2.744111] (-) TimerEvent: {}
+[2.845209] (-) TimerEvent: {}
+[2.947559] (-) TimerEvent: {}
+[3.052370] (-) TimerEvent: {}
+[3.154133] (-) TimerEvent: {}
+[3.255618] (-) TimerEvent: {}
+[3.357123] (-) TimerEvent: {}
+[3.458994] (-) TimerEvent: {}
+[3.560344] (-) TimerEvent: {}
+[3.662006] (-) TimerEvent: {}
+[3.763281] (-) TimerEvent: {}
+[3.865934] (-) TimerEvent: {}
+[3.968087] (-) TimerEvent: {}
+[4.068881] (-) TimerEvent: {}
+[4.169815] (-) TimerEvent: {}
+[4.271264] (-) TimerEvent: {}
+[4.372360] (-) TimerEvent: {}
+[4.473588] (-) TimerEvent: {}
+[4.574348] (-) TimerEvent: {}
+[4.675141] (-) TimerEvent: {}
+[4.776218] (-) TimerEvent: {}
+[4.877424] (-) TimerEvent: {}
+[4.978479] (-) TimerEvent: {}
+[5.079446] (-) TimerEvent: {}
+[5.180652] (-) TimerEvent: {}
+[5.282279] (-) TimerEvent: {}
+[5.383376] (-) TimerEvent: {}
+[5.484682] (-) TimerEvent: {}
+[5.586122] (-) TimerEvent: {}
+[5.688942] (-) TimerEvent: {}
+[5.790429] (-) TimerEvent: {}
+[5.851561] (body_control) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/body_control', 'build', '--build-base', '/home/ryan/treeclimber/build/body_control/build', 'install', '--record', '/home/ryan/treeclimber/build/body_control/install.log', '--single-version-externally-managed'], 'cwd': '/home/ryan/treeclimber/src/body_control', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'ryan', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/aarch64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/ryan', 'OLDPWD': '/home/ryan', 'DESKTOP_SESSION': 'ubuntu-xorg', 'GIO_LAUNCHED_DESKTOP_FILE': '/usr/share/applications/terminator.desktop', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'MANAGERPID': '997', 'SYSTEMD_EXEC_PID': '1511', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'TERMINATOR_DBUS_NAME': 'net.tenshu.Terminator21a9d5db22c73a993ff0b42f64b396873', 'GIO_LAUNCHED_DESKTOP_FILE_PID': '2184', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/ryan/treeclimber/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'ryan', 'JOURNAL_STREAM': '8:28157', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'ryan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/ryan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ryan-desktop:@/tmp/.ICE-unix/1485,unix/ryan-desktop:/tmp/.ICE-unix/1485', 'INVOCATION_ID': 'c029d19156cf485db8f8731101b66ac8', 'XDG_MENU_PREFIX': 'gnome-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'TERMINATOR_DBUS_PATH': '/net/tenshu/Terminator2', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'IBUS_DISABLE_SNOOPER': '1', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu-xorg', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'SSH_AGENT_LAUNCHER': 'openssh', 'SSH_AUTH_SOCK': '/run/user/1000/openssh_agent', 'AMENT_PREFIX_PATH': '/home/ryan/treeclimber/install/tail_control:/home/ryan/treeclimber/install/motor_tests:/home/ryan/treeclimber/install/drive_arms:/home/ryan/treeclimber/install/body_control:/opt/ros/humble', 'SHELL': '/bin/bash', 'TERMINATOR_UUID': 'urn:uuid:140a57ab-ff10-406d-9b0b-234987707988', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu-xorg', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/ryan/treeclimber/build/body_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/tail_control/lib/python3.10/site-packages:/home/ryan/treeclimber/install/motor_tests/lib/python3.10/site-packages:/home/ryan/treeclimber/install/drive_arms/lib/python3.10/site-packages:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800'}, 'shell': False}
+[5.899690] (-) TimerEvent: {}
+[6.001934] (-) TimerEvent: {}
+[6.103177] (-) TimerEvent: {}
+[6.204134] (-) TimerEvent: {}
+[6.307523] (-) TimerEvent: {}
+[6.411612] (-) TimerEvent: {}
+[6.513987] (-) TimerEvent: {}
+[6.618398] (-) TimerEvent: {}
+[6.720056] (-) TimerEvent: {}
+[6.821274] (-) TimerEvent: {}
+[6.922140] (-) TimerEvent: {}
+[7.022993] (-) TimerEvent: {}
+[7.123694] (-) TimerEvent: {}
+[7.225004] (-) TimerEvent: {}
+[7.325843] (-) TimerEvent: {}
+[7.426715] (-) TimerEvent: {}
+[7.527533] (-) TimerEvent: {}
+[7.628825] (-) TimerEvent: {}
+[7.731934] (-) TimerEvent: {}
+[7.833455] (-) TimerEvent: {}
+[7.857841] (body_control) StdoutLine: {'line': b'running egg_info\n'}
+[7.860775] (body_control) StdoutLine: {'line': b'writing ../../build/body_control/body_control.egg-info/PKG-INFO\n'}
+[7.861927] (body_control) StdoutLine: {'line': b'writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt\n'}
+[7.871224] (body_control) StdoutLine: {'line': b'writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt\n'}
+[7.872051] (body_control) StdoutLine: {'line': b'writing requirements to ../../build/body_control/body_control.egg-info/requires.txt\n'}
+[7.872647] (body_control) StdoutLine: {'line': b'writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt\n'}
+[7.877755] (body_control) StdoutLine: {'line': b"reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'\n"}
+[7.884776] (body_control) StdoutLine: {'line': b"writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'\n"}
+[7.886510] (body_control) StdoutLine: {'line': b'running build\n'}
+[7.887369] (body_control) StdoutLine: {'line': b'running build_py\n'}
+[7.888478] (body_control) StdoutLine: {'line': b'copying body_control/body_controller.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control\n'}
+[7.890405] (body_control) StdoutLine: {'line': b'copying body_control/arms_tighten.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control\n'}
+[7.894214] (body_control) StdoutLine: {'line': b'copying body_control/arms_loosen.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control\n'}
+[7.896168] (body_control) StdoutLine: {'line': b'copying body_control/pcb_test_full.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control\n'}
+[7.896980] (body_control) StdoutLine: {'line': b'running install\n'}
+[7.898036] (body_control) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[7.899751] (body_control) StderrLine: {'line': b'  warnings.warn(\n'}
+[7.900600] (body_control) StdoutLine: {'line': b'running install_lib\n'}
+[7.903902] (body_control) StdoutLine: {'line': b'copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/body_controller.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control\n'}
+[7.905258] (body_control) StdoutLine: {'line': b'copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_tighten.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control\n'}
+[7.906069] (body_control) StdoutLine: {'line': b'copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_loosen.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control\n'}
+[7.907376] (body_control) StdoutLine: {'line': b'copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/pcb_test_full.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control\n'}
+[7.914111] (body_control) StdoutLine: {'line': b'byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/body_controller.py to body_controller.cpython-310.pyc\n'}
+[7.926441] (body_control) StdoutLine: {'line': b'byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_tighten.py to arms_tighten.cpython-310.pyc\n'}
+[7.930076] (body_control) StdoutLine: {'line': b'byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_loosen.py to arms_loosen.cpython-310.pyc\n'}
+[7.930789] (body_control) StdoutLine: {'line': b'byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/pcb_test_full.py to pcb_test_full.cpython-310.pyc\n'}
+[7.933986] (-) TimerEvent: {}
+[7.940625] (body_control) StdoutLine: {'line': b'running install_data\n'}
+[7.944647] (body_control) StdoutLine: {'line': b'creating /home/ryan/treeclimber/install/body_control/share/body_control/launch\n'}
+[7.945919] (body_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[7.955231] (body_control) StdoutLine: {'line': b"removing '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[7.958119] (body_control) StdoutLine: {'line': b'Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info\n'}
+[7.968326] (body_control) StdoutLine: {'line': b'running install_scripts\n'}
+[8.034154] (-) TimerEvent: {}
+[8.077214] (body_control) StdoutLine: {'line': b'Installing arms_tighten script to /home/ryan/treeclimber/install/body_control/lib/body_control\n'}
+[8.080876] (body_control) StdoutLine: {'line': b"writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'\n"}
+[8.134767] (-) TimerEvent: {}
+[8.236596] (-) TimerEvent: {}
+[8.338576] (-) TimerEvent: {}
+[8.345235] (body_control) CommandEnded: {'returncode': 0}
+[8.439296] (-) TimerEvent: {}
+[8.544772] (-) TimerEvent: {}
+[8.660480] (-) TimerEvent: {}
+[8.763006] (-) TimerEvent: {}
+[8.864797] (-) TimerEvent: {}
+[8.896202] (body_control) JobEnded: {'identifier': 'body_control', 'rc': 0}
+[8.905358] (-) EventReactorShutdown: {}

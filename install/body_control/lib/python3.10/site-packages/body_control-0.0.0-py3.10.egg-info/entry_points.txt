@@ -1,3 +1,4 @@
 [console_scripts]
-
+arms_loosen = body_control.arms_loosen:main
+arms_tighten = body_control.arms_tighten:main
 

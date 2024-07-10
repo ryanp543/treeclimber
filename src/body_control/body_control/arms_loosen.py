@@ -22,22 +22,19 @@ def main(args=None):
     rclpy.init(args=args)
     arms_node = rclpy.create_node('arm_publisher')
     arms_pub = arms_node.create_publisher(String, 'body_control_topic', 10)
-    
+
     # Create my_controller object
     my_controller = MyController()
 
-    # Wind up right arm tendon using position command based on matlab Kinematics.m 
-    # Finish with torque. Positive value: windup
-    arms_node.get_logger().info("RIGHT ARM TIGHTEN CMD SENT")
-    my_controller.send_command(5, [0, 2.9850, 0, 0])
-    my_controller.send_command(5, [2, 3, 1, 2.2])
-    time.sleep(3)
+    # Loosen left arm
+    arms_node.get_logger().info("LEFT ARM LOOSEN CMD SENT")
+    my_controller.send_command(4, [0, 19.5, 0, 0])
 
-    # Wind up left arm tendon using position command, then torque command
-    # Negative value: windup (-15.1398)
-    arms_node.get_logger().info("LEFT ARM TIGHTEN CMD SENT")
-    my_controller.send_command(4, [0, -15.1398, 0, 0])
-    my_controller.send_command(4, [-4, 5, 1, 2.2])
+    # Loosen right arm, temporarily tighten midway to unlatch
+    arms_node.get_logger().info("RIGHT ARM LOOSEN CMD SENT")
+    my_controller.send_command(5, [0, -2, 0, 0])
+    my_controller.send_command(5, [0, 2, 0, 0])
+    my_controller.send_command(5, [0, -3.5, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()

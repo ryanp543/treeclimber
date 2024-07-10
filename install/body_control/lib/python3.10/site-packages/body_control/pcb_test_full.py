@@ -56,7 +56,7 @@ def receive_status(msg):
 
 # Function map_to_uint16
 # Takes a value, a maximum, and a minimum and outputs a 16 bit integer that
-# represents the value between the bounds. Note that any val    print(position_data[-1])ue above the max
+# represents the value between the bounds. Note that value above the max
 # or below the min will be set to the max or the min, respectively. 
 def map_to_uint16(value, max_value, min_value):
     value_range = max_value - min_value
@@ -332,6 +332,7 @@ if __name__ == "__main__":
     os.system('sudo ifconfig can0 down')
 
     # Plot data
+
 
 
     
