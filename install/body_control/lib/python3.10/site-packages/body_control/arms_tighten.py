@@ -26,6 +26,11 @@ def main(args=None):
     # Create my_controller object
     my_controller = MyController()
 
+    # Orient end link servos properly
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
+    time.sleep(1)
+
     # Wind up right arm tendon using position command based on matlab Kinematics.m 
     # Finish with torque. Positive value: windup
     arms_node.get_logger().info("RIGHT ARM TIGHTEN CMD SENT")
