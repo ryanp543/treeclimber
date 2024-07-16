@@ -25,6 +25,7 @@ setup(
         'console_scripts': [
             'arms_tighten = body_control.arms_tighten:main',
             'arms_loosen = body_control.arms_loosen:main',
+            'drive_robot = body_control.drive_robot:main',
         ],
     },
 )

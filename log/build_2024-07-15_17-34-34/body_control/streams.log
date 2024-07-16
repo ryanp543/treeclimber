@@ -1,0 +1,33 @@
+[6.019s] Invoking command in '/home/ryan/treeclimber/src/body_control': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed
+[7.820s] running egg_info
+[7.823s] writing ../../build/body_control/body_control.egg-info/PKG-INFO
+[7.824s] writing dependency_links to ../../build/body_control/body_control.egg-info/dependency_links.txt
+[7.825s] writing entry points to ../../build/body_control/body_control.egg-info/entry_points.txt
+[7.827s] writing requirements to ../../build/body_control/body_control.egg-info/requires.txt
+[7.827s] writing top-level names to ../../build/body_control/body_control.egg-info/top_level.txt
+[7.837s] reading manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+[7.850s] writing manifest file '../../build/body_control/body_control.egg-info/SOURCES.txt'
+[7.851s] running build
+[7.852s] running build_py
+[7.855s] copying body_control/arms_tighten.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+[7.857s] copying body_control/arms_loosen.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+[7.864s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[7.866s]   warnings.warn(
+[7.868s] copying body_control/arms_tweak.py -> /home/ryan/treeclimber/build/body_control/build/lib/body_control
+[7.869s] running install
+[7.870s] running install_lib
+[7.873s] copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_tighten.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+[7.878s] copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_loosen.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+[7.880s] copying /home/ryan/treeclimber/build/body_control/build/lib/body_control/arms_tweak.py -> /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control
+[7.882s] byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_tighten.py to arms_tighten.cpython-310.pyc
+[7.885s] byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_loosen.py to arms_loosen.cpython-310.pyc
+[7.889s] byte-compiling /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control/arms_tweak.py to arms_tweak.cpython-310.pyc
+[7.892s] running install_data
+[7.897s] running install_egg_info
+[7.911s] removing '/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info' (and everything under it)
+[7.916s] Copying ../../build/body_control/body_control.egg-info to /home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages/body_control-0.0.0-py3.10.egg-info
+[7.923s] running install_scripts
+[8.047s] Installing arms_loosen script to /home/ryan/treeclimber/install/body_control/lib/body_control
+[8.048s] Installing arms_tighten script to /home/ryan/treeclimber/install/body_control/lib/body_control
+[8.048s] writing list of installed files to '/home/ryan/treeclimber/build/body_control/install.log'
+[8.277s] Invoked command in '/home/ryan/treeclimber/src/body_control' returned '0': PYTHONPATH=/home/ryan/treeclimber/build/body_control/prefix_override:/home/ryan/treeclimber/install/body_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/body_control build --build-base /home/ryan/treeclimber/build/body_control/build install --record /home/ryan/treeclimber/build/body_control/install.log --single-version-externally-managed

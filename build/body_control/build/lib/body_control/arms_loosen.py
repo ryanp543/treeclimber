@@ -5,6 +5,7 @@ import rclpy
 from rclpy.node import Node
 from std_msgs.msg import String
 from .body_controller import MyController
+# from body_controller import MyController
 
 # Message IDs for different commands
 # 0x1 = wheel position (value, P, I, D)
@@ -28,13 +29,13 @@ def main(args=None):
 
     # Loosen left arm
     arms_node.get_logger().info("LEFT ARM LOOSEN CMD SENT")
-    my_controller.send_command(4, [0, 19.5, 0, 0])
+    my_controller.send_command(4, [0, 18.8, 0, 0])
 
     # Loosen right arm, temporarily tighten midway to unlatch
     arms_node.get_logger().info("RIGHT ARM LOOSEN CMD SENT")
     my_controller.send_command(5, [0, -2, 0, 0])
     my_controller.send_command(5, [0, 2, 0, 0])
-    my_controller.send_command(5, [0, -3.5, 0, 0])
+    my_controller.send_command(5, [0, -3.8, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()
