@@ -36,18 +36,19 @@ def main(args=None):
     # Finish with torque. Positive value: windup
     arms_node.get_logger().info("RIGHT ARM TIGHTEN CMD SENT")
     my_controller.send_command(5, [0, 2.9850, 0, 0])
-    my_controller.send_command(5, [3, 1, 1, 2.2])
+    my_controller.send_command(5, [4, 1, 1, 2.2])
     time.sleep(3)
 
     # Wind up left arm tendon using position command, then torque command
     # Negative value: windup (-15.1398)
     arms_node.get_logger().info("LEFT ARM TIGHTEN CMD SENT")
-    my_controller.send_command(4, [0, -15.1398, 0, 0])
-    my_controller.send_command(4, [-5, 3, 1, 2.2])
+    my_controller.send_command(4, [0, -2.9850, 0, 0])
+    my_controller.send_command(4, [-4, 1, 1, 2.2])
 
-    time.sleep(12)
-    # print("here")
-    my_controller.send_command(5, [5, 1, 1, 2.2])
+    # time.sleep(12)
+    print("done")
+    # my_controller.send_command(5, [5, 1, 1, 2.2])
+    # my_controller.send_command(4, [-5, 1, 1, 2.2])
 
     # Shutdown controller object
     my_controller.shutdown()

@@ -7,8 +7,8 @@ VEL_MAX = 8.0          # 74 rpm =~ 8 rad/s for 70 kg-cm torque
 VEL_MIN = -8.0
 TURR_MAX = 12.5
 TURR_MIN = -12.5
-SERVO_MAX = 105.0
-SERVO_MIN = -195.0
+SERVO_MAX = 90.0
+SERVO_MIN = -180.0
 NUM_SERVOS = 3
 TORQUE_MAX = 6.5        # [N*m], 70 kg stall torque = ~6.8 N*m
 TORQUE_MIN = -6.5

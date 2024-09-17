@@ -4,8 +4,8 @@ import rclpy
 
 from rclpy.node import Node
 from std_msgs.msg import String
-# from body_controller import MyController
-from .body_controller import MyController
+from body_controller import MyController
+# from .body_controller import MyController
 
 # Message IDs for different commands
 # 0x1 = wheel position (value, P, I, D)
@@ -28,35 +28,36 @@ def main(args=None):
     my_controller = MyController()
 
     # Drive up
-    drive_node.get_logger().info("VELOCITY COMMAND SENT")
-    my_controller.send_command(2, [5.5, 10.0, 0, 0.1])
-    time.sleep(2)
-    my_controller.send_command(2, [0, 10.0, 0, 0.1])
-    time.sleep(1)
+    # drive_node.get_logger().info("VELOCITY COMMAND SENT")
+    # my_controller.send_command(2, [5, 10.0, 0, 0.1])
+    # time.sleep(2)
+    # my_controller.send_command(2, [0, 10.0, 0, 0.1])
+    # time.sleep(1)
     
     # # Rotate turret
     # my_controller.send_command(3, [-math.pi/2, 25, 2, 5])
-    # time.sleep(2)
-    # my_controller.send_command(3, [math.pi/2, 25, 2, 5])
-    # time.sleep(2)
+    # time.sleep(5)
+    # my_controller.send_command(3, [(math.pi/2), 25, 2, 5])
+    # # my_controller.send_command(3, [((math.pi/2) + 0.1), 25, 2, 5])
+    # time.sleep(4)
 
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
 
-    # time.sleep(2)
+    time.sleep(2)
 
-    # my_controller.send_command(6, [1, 90, 0, 0])
-    # my_controller.send_command(6, [2, 90, 0, 0])
+    my_controller.send_command(6, [1, 90, 0, 0])
+    my_controller.send_command(6, [2, 90, 0, 0])
 
-    # time.sleep(2)
+    time.sleep(2)
 
-    # my_controller.send_command(6, [1, -180, 0, 0])
-    # my_controller.send_command(6, [2, -180, 0, 0])
+    my_controller.send_command(6, [1, -90, 0, 0])
+    my_controller.send_command(6, [2, -90, 0, 0])
     
-    # time.sleep(2)
+    time.sleep(2)
     
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()
