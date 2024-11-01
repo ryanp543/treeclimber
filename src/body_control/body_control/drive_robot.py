@@ -27,7 +27,7 @@ def main(args=None):
     # Create my_controller object
     my_controller = MyController()
 
-    # Drive up
+    # # Drive up
     # drive_node.get_logger().info("VELOCITY COMMAND SENT")
     # my_controller.send_command(2, [5, 10.0, 0, 0.1])
     # time.sleep(2)
@@ -41,23 +41,27 @@ def main(args=None):
     # # my_controller.send_command(3, [((math.pi/2) + 0.1), 25, 2, 5])
     # time.sleep(4)
 
-    my_controller.send_command(6, [1, 0, 0, 0])
-    my_controller.send_command(6, [2, 0, 0, 0])
+    # Latch
+    my_controller.send_command(7, [0, 0.76, 0, 0])
 
-    time.sleep(2)
+    # # servo
+    # my_controller.send_command(6, [1, 0, 0, 0])
+    # my_controller.send_command(6, [2, 0, 0, 0])
 
-    my_controller.send_command(6, [1, 90, 0, 0])
-    my_controller.send_command(6, [2, 90, 0, 0])
+    # time.sleep(2)
 
-    time.sleep(2)
+    # my_controller.send_command(6, [1, 90, 0, 0])
+    # my_controller.send_command(6, [2, 90, 0, 0])
 
-    my_controller.send_command(6, [1, -90, 0, 0])
-    my_controller.send_command(6, [2, -90, 0, 0])
+    # time.sleep(2)
+
+    # my_controller.send_command(6, [1, -90, 0, 0])
+    # my_controller.send_command(6, [2, -90, 0, 0])
     
-    time.sleep(2)
+    # time.sleep(2)
     
-    my_controller.send_command(6, [1, 0, 0, 0])
-    my_controller.send_command(6, [2, 0, 0, 0])
+    # my_controller.send_command(6, [1, 0, 0, 0])
+    # my_controller.send_command(6, [2, 0, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()

@@ -18,6 +18,8 @@ KD_MAX = 5.0
 KD_MIN = -1.0
 KI_MAX = 30.0
 KI_MIN = -1.0
+ILATCH_MAX = 1.0
+ILATCH_MIN = 0.0
 
 class MyController:
     # Initialization function
@@ -98,6 +100,9 @@ class MyController:
             case 6: 
                 maximums = [NUM_SERVOS, SERVO_MAX, 1.0, 1.0]
                 minimums = [1.0, SERVO_MIN, 0.0, 0.0]
+            case 7:
+                maximums = [1.0, ILATCH_MAX, 1.0, 1.0]
+                minimums = [0.0, ILATCH_MIN, 0.0, 0.0]  
             case 8:
                 maximums = [1.0, 1.0, 1.0, 1.0]
                 minimums = [0.0, 0.0, 0.0, 0.0]  
