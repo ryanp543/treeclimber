@@ -27,16 +27,20 @@ def main(args=None):
     # Create my_controller object
     my_controller = MyController()
 
+    # Undo latch
+    my_controller.send_command(7, [0, 0.9, 0, 0])
+    time.sleep(40)
+
     # Loosen left arm
     arms_node.get_logger().info("LEFT ARM LOOSEN CMD SENT")
-    my_controller.send_command(4, [0, 4.5, 0, 0])
+    my_controller.send_command(4, [0, 4.3, 0, 0])
 
     # Loosen right arm, temporarily tighten midway to unlatch
     arms_node.get_logger().info("RIGHT ARM LOOSEN CMD SENT")
     my_controller.send_command(5, [0, -2, 0, 0])
     my_controller.send_command(5, [0, 2, 0, 0])
     
-    my_controller.send_command(5, [0, -3.6, 0, 0])
+    my_controller.send_command(5, [0, -3.7, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()

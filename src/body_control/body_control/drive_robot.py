@@ -42,26 +42,26 @@ def main(args=None):
     # time.sleep(4)
 
     # Latch
-    my_controller.send_command(7, [0, 0.76, 0, 0])
+    # my_controller.send_command(7, [0, 0.9, 0, 0])
 
-    # # servo
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    # servo
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
 
-    # time.sleep(2)
+    time.sleep(2)
 
-    # my_controller.send_command(6, [1, 90, 0, 0])
-    # my_controller.send_command(6, [2, 90, 0, 0])
+    my_controller.send_command(6, [1, 90, 0, 0])
+    my_controller.send_command(6, [2, 90, 0, 0])
 
-    # time.sleep(2)
+    time.sleep(2)
 
-    # my_controller.send_command(6, [1, -90, 0, 0])
-    # my_controller.send_command(6, [2, -90, 0, 0])
+    my_controller.send_command(6, [1, -90, 0, 0])
+    my_controller.send_command(6, [2, -90, 0, 0])
     
-    # time.sleep(2)
+    time.sleep(2)
     
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()

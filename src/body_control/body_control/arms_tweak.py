@@ -29,7 +29,7 @@ def main(args=None):
 
     # Wind up left arm tendon using position command, then torque command
     # Negative value: windup (-15.1398)
-    my_controller.send_command(4, [0, -1, 0, 0])
+    # my_controller.send_command(4, [0, -1, 0, 0])
 
     # Shutdown controller object
     my_controller.shutdown()
