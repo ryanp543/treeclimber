@@ -27,38 +27,44 @@ def main(args=None):
     # Create my_controller object
     my_controller = MyController()
 
-    # Drive up
+    # # Drive up
     # drive_node.get_logger().info("VELOCITY COMMAND SENT")
     # my_controller.send_command(2, [5, 10.0, 0, 0.1])
     # time.sleep(2)
     # my_controller.send_command(2, [0, 10.0, 0, 0.1])
     # time.sleep(1)
-
-    my_controller.send_command(1, [20, 40.0, 1.0, 0.1])
-    time.sleep(2)
-    # my_controller.send_command(1, [0, 10.0, 0, 0.1])
-    # time.sleep(1)
     
-    # # Rotate turret
-    # my_controller.send_command(3, [-math.pi/2, 25, 2, 5])
-    # time.sleep(5)
+    # Rotate turret
+    my_controller.send_command(3, [-math.pi/2, 25, 2, 5])
+    time.sleep(5)
     # my_controller.send_command(3, [(math.pi/2), 25, 2, 5])
-    # # my_controller.send_command(3, [((math.pi/2) + 0.1), 25, 2, 5])
+    # my_controller.send_command(3, [((math.pi/2) + 0.1), 25, 2, 5])
     # time.sleep(4)
 
-    # # servo
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    # servo
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
 
-    # time.sleep(2)
+    time.sleep(2)
 
-    # my_controller.send_command(6, [1, -90, 0, 0])
-    # my_controller.send_command(6, [2, -90, 0, 0])
+    my_controller.send_command(6, [1, -90, 0, 0])
+    my_controller.send_command(6, [2, -90, 0, 0])
+
+    time.sleep(3)
+
+    my_controller.send_command(1, [6, 40.0, 1.0, 0.1])
+    time.sleep(6)
     
-    # time.sleep(2)
     
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
+
+    time.sleep(2)
+
+    my_controller.send_command(3, [(math.pi/2), 25, 2, 5])
+    # my_controller.send_command(3, [((math.pi/2) + 0.1), 25, 2, 5])
+    time.sleep(4)
+
 
     # Latch
     # my_controller.send_command(7, [0, 0.9, 0, 0])
