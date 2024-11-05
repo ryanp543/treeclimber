@@ -27,41 +27,60 @@ def main(args=None):
     # Create my_controller object
     my_controller = MyController()
 
-    # Drive up
-    # drive_node.get_logger().info("VELOCITY COMMAND SENT")
-    # my_controller.send_command(2, [5, 10.0, 0, 0.1])
-    # time.sleep(2)
-    # my_controller.send_command(2, [0, 10.0, 0, 0.1])
-    # time.sleep(1)
-
-    my_controller.send_command(1, [20, 40.0, 1.0, 0.1])
+    # Drive up and rotate servos up
+    print("Drive up 1")
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
     time.sleep(2)
-    # my_controller.send_command(1, [0, 10.0, 0, 0.1])
-    # time.sleep(1)
+    my_controller.send_command(1, [8, 40.0, 1.0, 0.1])
+    time.sleep(3)
     
-    # # Rotate turret
-    # my_controller.send_command(3, [-math.pi/2, 25, 2, 5])
-    # time.sleep(5)
-    # my_controller.send_command(3, [(math.pi/2), 25, 2, 5])
-    # # my_controller.send_command(3, [((math.pi/2) + 0.1), 25, 2, 5])
-    # time.sleep(4)
+    # Rotate turret and servos
+    print("Rotate right 1")
+    my_controller.send_command(3, [-math.pi/2, 25, 2, 5])
+    my_controller.send_command(6, [1, -90, 0, 0])
+    my_controller.send_command(6, [2, -90, 0, 0])
+    time.sleep(5)
 
-    # # servo
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    # Drive around column
+    my_controller.send_command(1, [5, 40.0, 1.0, 0.1])
+    time.sleep(3)
 
-    # time.sleep(2)
+    # Rotate back
+    my_controller.send_command(3, [(math.pi/2), 25, 2, 5])
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
+    time.sleep(5)
 
-    # my_controller.send_command(6, [1, -90, 0, 0])
-    # my_controller.send_command(6, [2, -90, 0, 0])
-    
-    # time.sleep(2)
-    
-    # my_controller.send_command(6, [1, 0, 0, 0])
-    # my_controller.send_command(6, [2, 0, 0, 0])
+    # Drive up
+    print("Drive up 2")
+    my_controller.send_command(1, [10, 40.0, 1.0, 0.1])
+    time.sleep(3)
 
-    # Latch
-    # my_controller.send_command(7, [0, 0.9, 0, 0])
+    # Rotate turret and servos
+    print("Rotate left 2")
+    my_controller.send_command(3, [math.pi/2, 25, 2, 5])
+    my_controller.send_command(6, [1, 90, 0, 0])
+    my_controller.send_command(6, [2, 90, 0, 0])
+    time.sleep(5)
+
+    # Drive around column
+    my_controller.send_command(1, [5, 40.0, 1.0, 0.1])
+    time.sleep(3)
+
+    # Rotate back
+    my_controller.send_command(3, [-(math.pi/2), 25, 2, 5])
+    my_controller.send_command(6, [1, 0, 0, 0])
+    my_controller.send_command(6, [2, 0, 0, 0])
+    time.sleep(5)
+
+    # Drive down and rotate servo
+    print("Drive down 3")
+    my_controller.send_command(6, [1, -180, 0, 0])
+    my_controller.send_command(6, [2, -180, 0, 0])
+    time.sleep(1)
+    my_controller.send_command(1, [-16, 40.0, 1.0, 0.1])
+    time.sleep(3)
 
     # Shutdown controller object
     my_controller.shutdown()

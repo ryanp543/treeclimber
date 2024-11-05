@@ -29,7 +29,8 @@ def main(args=None):
 
     # Undo latch
     my_controller.send_command(7, [0, 0.9, 0, 0])
-    time.sleep(40)
+    time.sleep(40
+    )
 
     # Loosen left arm
     arms_node.get_logger().info("LEFT ARM LOOSEN CMD SENT")
