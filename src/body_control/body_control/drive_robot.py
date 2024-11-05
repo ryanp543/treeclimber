@@ -83,6 +83,7 @@ def main(args=None):
     time.sleep(3)
 
     # Shutdown controller object
+    print("Done, shutting down now")
     my_controller.shutdown()
 
     # Shutdown ROS node
