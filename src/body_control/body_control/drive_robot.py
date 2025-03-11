@@ -32,7 +32,7 @@ def main(args=None):
     my_controller.send_command(6, [1, 0, 0, 0])
     my_controller.send_command(6, [2, 0, 0, 0])
     time.sleep(2)
-    my_controller.send_command(1, [8, 40.0, 1.0, 0.1])
+    my_controller.send_command(1, [12, 40.0, 1.0, 0.1])
     time.sleep(3)
     
     # Rotate turret and servos
@@ -54,22 +54,22 @@ def main(args=None):
 
     # Drive up
     print("Drive up 2")
-    my_controller.send_command(1, [10, 40.0, 1.0, 0.1])
+    my_controller.send_command(1, [12, 40.0, 1.0, 0.1])
     time.sleep(3)
 
     # Rotate turret and servos
     print("Rotate left 2")
-    my_controller.send_command(3, [math.pi/2, 25, 2, 5])
+    my_controller.send_command(3, [-math.pi/2, 25, 2, 5])
     my_controller.send_command(6, [1, 90, 0, 0])
     my_controller.send_command(6, [2, 90, 0, 0])
     time.sleep(5)
 
     # Drive around column
-    my_controller.send_command(1, [5, 40.0, 1.0, 0.1])
+    my_controller.send_command(1, [-5, 40.0, 1.0, 0.1])
     time.sleep(3)
 
     # Rotate back
-    my_controller.send_command(3, [-(math.pi/2), 25, 2, 5])
+    my_controller.send_command(3, [(math.pi/2), 25, 2, 5])
     my_controller.send_command(6, [1, 0, 0, 0])
     my_controller.send_command(6, [2, 0, 0, 0])
     time.sleep(5)
@@ -79,7 +79,7 @@ def main(args=None):
     my_controller.send_command(6, [1, -180, 0, 0])
     my_controller.send_command(6, [2, -180, 0, 0])
     time.sleep(1)
-    my_controller.send_command(1, [-16, 40.0, 1.0, 0.1])
+    my_controller.send_command(1, [-10, 40.0, 1.0, 0.1])
     time.sleep(3)
 
     # Shutdown controller object
