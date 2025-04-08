@@ -1,3 +1,3 @@
-# treeclimber
+# CLIMR ROS2 Package
 
-hell yeah
+Welcome to the ROS 2 package for CLIMR (Cabled Limb Interlocking Modular Robot). 
